@@ -17,5 +17,5 @@ We are going to look at these three types of variables:
 -   `string`
 -   `number`
 -   `boolean`
-
-String
+    ss
+    String
