@@ -19,7 +19,7 @@ A lot of the time we don't want our code to run immediately, but at a later time
 
 ## Instructions
 
-Use one of the ways outlined in [lesson 1](lesson-2.md) to follow along and run the code in the examples.
+Use one of the ways outlined in [lesson 1](lesson-1.md) to follow along and run the code in the examples.
 
 ## Our first function
 
