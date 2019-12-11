@@ -4,13 +4,25 @@
 
 Programming is the act of writing instructions for a computer to follow.
 
-In web browsers, we use `JavaScript` to write these instructions. A program inside the browser called a JavaScript engine `interprets` the code we write and delivers it to the computer to execute.
+Computers only speak `binary`, in `0`s and `1`s. In order to communicate with them we use programming languages which are eventually translated into
+binary.
+
+In web browsers, `JavaScript` is the programming language we use. A program inside the browser called a JavaScript engine translates the code - this is called `interpretation` - and delivers it to the computer to execute.
+
+We are not going to go into too much more theory, but rather get you coding writing JavaScript as soon as possible.
 
 ## Writing JavaScript
 
-### Development console
+### Using the development console
 
-We recommned using [Chrome](https://www.google.com/chrome/) as your web browser when developing for the web, and the instructions and screenshots will be from that browser.
+We recommend using [Chrome](https://www.google.com/chrome/) as your web browser when developing for the web, and the instructions and screenshots will be from that browser.
+
+We can use a browser's `console` to write and run JavaScript without needing any other program.
+
+To open the console, do one of the following:
+
+- right-click anywhere on a web page and select `Inspect` from the menu
+- 
 
 We will be writing our JavaScript in files, but paying attention to the console in your browser is important as this is where errors in your code will appear.
 
@@ -31,11 +43,11 @@ Create a new folder called `beginning-js` where you keep your code and open it i
 
 Right-click in the left pane
 
-<img src="images/vscode-pane.png" alt="VSCode pane" width="600" height="246" />
+<img src="/images/vscode-pane.png" alt="VSCode pane" width="600" height="246" />
 
 and create a new file called `index.html`. Type `html:5` inside the new file and press `Tab` on your keyboard.
 
-<img src="images/html5.png" alt="html:5" width="600" height="177" />
+<img src="/images/html5.png" alt="html:5" width="600" height="177" />
 
 This is a quick way to scaffold a new HTML file. You can read more about these kind of shortcuts [here](https://code.visualstudio.com/docs/editor/emmet).
 
@@ -51,7 +63,7 @@ The `root` of your project is the parent folder for all your files. Until you st
 
 Keep your js files in a folder called `js`. Create a file called `script.js` in that folder.
 
-<img src="images/file-arrangement.png" alt="File arrangement" width="600" height="198" />
+<img src="/images/file-arrangement.png" alt="File arrangement" width="600" height="198" />
 
 ### Setting up Visual Studio Code (VSCode) as your editor
 
