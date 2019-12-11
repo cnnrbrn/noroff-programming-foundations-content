@@ -9,7 +9,7 @@ Functions are code that does a certain thing, that performs a particular task. W
 
 When JavaScript code gets loaded in the browser, the browser will run the code as it finds it, from top to bottom.
 
-As soon as the browser encounters this code it will run:
+As soon as the browser encounters this code, it will run:
 
 ```js
 console.log("hello");
@@ -44,7 +44,7 @@ function logHello() {
 }
 ```
 
-Once we've written the function, we need to `call` (or `execute` or `invoke`) it. Without calling the function, the code inside it won't run. The JavaScript engine knows about it, but won't execute it.
+Once we've written the function, we need to `call` (or `execute` or `invoke`) it. Without calling the function, the code inside it won't run. The browser knows about it, but won't execute it.
 
 We call a function using its name and parenthesis.
 
@@ -56,7 +56,7 @@ logHello();
 
 Now the `logHello` function will run and log "Hello" to the browser console.
 
-<img src="images/function-process.png" alt="function process" width="600" height="313" />
+<!-- <img src="images/function-process.png" alt="function process" width="600" height="313" /> -->
 
 ## Arguments
 
@@ -65,10 +65,10 @@ Most of the time we want to pass variables into our functions so that the code i
 When we use `console.log`, we are passing a `string` variable into the `log` function. The `log` function then prints that variable out.
 
 ```js
-console.log("I am an argument");
+console.log("I am a string");
 ```
 
-The variables that we pass in to functions are called arguments. When we declare the function we can call the argument(s) whatever we want:
+The variables that we pass in to functions are called arguments. Becuse they are variables, when we declare the function we can call the argument(s) whatever we want:
 
 ```js
 // declare the function
