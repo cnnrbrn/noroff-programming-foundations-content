@@ -7,11 +7,15 @@ Programming is the act of writing instructions for a computer to follow.
 Computers only speak `binary`, in `0`s and `1`s. In order to communicate with them we use programming languages which are eventually translated into
 binary.
 
-In web browsers, `JavaScript` is the programming language we use. A program inside the browser called a JavaScript engine translates the code - this is called `interpretation` - and delivers it to the computer to execute.
+In web browsers, `JavaScript` is the programming language we use. A program inside the browser called a JavaScript engine translates the code and delivers it to the computer to execute.
 
-We are not going to go into too much more theory, but rather get you coding writing JavaScript as soon as possible.
+Everything dynamic on a web page, from news feeds to like buttons and games is created with JavaScript.
+
+We are not going to go into too much theory, let's rather get coding.
 
 ## Writing JavaScript
+
+In JavaScript, instructions for the computer are called `statements`.
 
 ### Using the development console
 
@@ -26,6 +30,21 @@ To open the console, do one of the following:
 
 We will be writing our JavaScript in files, but paying attention to the console in your browser is important as this is where errors in your code will appear.
 
+### Using script tags in an HTML page
+
+We recommed using [Visual Studio Code (VSCode)](https://code.visualstudio.com/) as your editor.
+
+Create a new folder called `beginning-js` where you keep your code and open it in VSCode.
+
+Create a new file called `index.html` by right-clicking in the left pane and selecting `New File` or by using the `File` menu.
+
+Type `html:5` inside the new file and press `Tab` on your keyboard.
+
+<img src="/images/html5.png" alt="html:5" width="600" height="177" />
+
+This is a quick way to scaffold a new HTML file. You can read more about these kind of shortcuts [here](https://code.visualstudio.com/docs/editor/emmet).
+
+
 ### Adding a JavaScript file to an HTML page
 
 Instead of typing directly into the developer tools console, we can use the `console.log` function. Using this function we can programmatically do what we manually did above, i.e. log (or print) the values to the console. To log the variables we entered above, we pass them in to the log function:
@@ -37,19 +56,7 @@ console.log(10 + 5);
 
 ### Connecting and arranging your code
 
-We recommed using [Visual Studio Code (VSCode)](https://code.visualstudio.com/) as your editor.
 
-Create a new folder called `beginning-js` where you keep your code and open it in VSCode.
-
-Right-click in the left pane
-
-<img src="/images/vscode-pane.png" alt="VSCode pane" width="600" height="246" />
-
-and create a new file called `index.html`. Type `html:5` inside the new file and press `Tab` on your keyboard.
-
-<img src="/images/html5.png" alt="html:5" width="600" height="177" />
-
-This is a quick way to scaffold a new HTML file. You can read more about these kind of shortcuts [here](https://code.visualstudio.com/docs/editor/emmet).
 
 Before the closing `</body>` tag, add a `<script>` tag with a `src` attribute whose value is the path to a JavaScript file that we will create next:
 
@@ -64,6 +71,10 @@ The `root` of your project is the parent folder for all your files. Until you st
 Keep your js files in a folder called `js`. Create a file called `script.js` in that folder.
 
 <img src="/images/file-arrangement.png" alt="File arrangement" width="600" height="198" />
+
+### A note on semi-colons
+
+
 
 ### Setting up Visual Studio Code (VSCode) as your editor
 
@@ -101,14 +112,57 @@ Single-line comments are often combined together:
 
 ## Variables
 
-Variables are how a programming language store information in a computer's memory.
+Variables are how a programming language stores information in a computer's memory. Once stored in memory, we can act on and use this information in other parts of our program.
 
-Variable names must start with a letter (a to z or A to Z), dollar sign (\$) or underscore (\_). We are only going to use lowercase letters to being our variable names.
+Variable names must start with a letter (a to z or A to Z), dollar sign (\$) or underscore (\_). We are only going to use lowercase letters to begin our variable names.
+
+Variables are declared with the `var` keyword. (We will use the `const` and `let` variables to declare variables in a later course.)
 
 We are going to look at these three types of variables:
 
 -   `string`
 -   `number`
 -   `boolean`
+
+### Strings
+
+Strings are pieces of text. They can range in size from one character like `a` to a whole book of characters.
+
+They're enclosed in either single `'` or double `"` quotes. You can use either but stick with one throughout your code.
+
+Let's create our first string variable. To declare a variable we use `var` and a name of our choice:
+
+```js
+var pet = "dog";
+```
+
+We're storing the string (text) "dog" in a variable called `pet`.  `pet` now has the value of "dog". 
+
+We can now use that variable anywhere in our code:
+
+```js
+console.log(pet);
+```
+
+---
+
+Create your first JavaScript variable:
+
+###### Create a variable called `pet` with a value of "cat"
+~~parser js strings firstString~~
+
+---
+
+Letter case matters in JavaScript. "Cat" is not equal to "cat". In the practice question above, if you give the variable a value of "Cat", the code checker will complain that's it looking for "cat".
+
+In JavaScript we would say
+
+```js
+// "Cat" is not equal to "cat"
+"Cat" !== "cat"
+```
+
+(We will get to equality operators like `!==` soon)
+
 
 ## Other tools

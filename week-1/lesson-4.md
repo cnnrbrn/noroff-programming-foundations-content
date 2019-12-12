@@ -17,9 +17,11 @@ console.log("hello");
 
 A lot of the time we don't want our code to run immediately, but at a later time. This is another use case for functions.
 
-## Instructions
+<!-- ---
 
 Use one of the ways outlined in [lesson 1](lesson-1.md) to follow along and run the code in the examples.
+
+--- -->
 
 ## Our first function
 
@@ -32,11 +34,13 @@ function logHello() {
 }
 ```
 
-Above, we've declared a function called `logHello`. Like other variables, functions can be called anything. **_Give your functions meaningful names_**, though, functions called `hi` or `function1` are not well-named functions.
+Above, we've declared a function called `logHello`.
+
+Like other variables, functions can be called anything. **_Give your functions meaningful names_**, though, functions called `hi` or `function1` are not well-named functions.
 
 The contents of a function live between the curly braces `{ }`. We don't have any code there except a comment so our function doesn't do anything at the moment. We will look at the purpose of the parenthesis (round brackets) `()` later in the lesson.
 
-Let's make our function do something, a simple console log statement:
+Let's make our function do something, log a string to the console:
 
 ```js
 function logHello() {
@@ -56,69 +60,17 @@ logHello();
 
 Now the `logHello` function will run and log "Hello" to the browser console.
 
-<!-- <img src="images/function-process.png" alt="function process" width="600" height="313" /> -->
+---
+
+###### Create an empty function called `emptyFunction`
+~~parser js functions firstFunction~~
+
+--- 
+
+
+###### Create a function called `sayHello` that console logs the string "hello"
+~~parser js functions consoleLog~~
 
 ## Arguments
 
-Most of the time we want to pass variables into our functions so that the code inside the function can use them.
-
-When we use `console.log`, we are passing a `string` variable into the `log` function. The `log` function then prints that variable out.
-
-```js
-console.log("I am a string");
-```
-
-The variables that we pass in to functions are called arguments. Becuse they are variables, when we declare the function we can call the argument(s) whatever we want:
-
-```js
-// declare the function
-// this function has no argument
-function logHello() {
-    console.log("Hello");
-}
-```
-
-// call (execute) the function
-sayHello();
-
-// declare a function with one argument
-// arguments can be
-function withAnArgument(message) {
-console.log(message);
-}
-
-// call the function
-withAnArgument("this is an argument version 2")
-
-function addNumbers(number1, number2) {
-var sum = number1 + number2;
-// console.log(sum);
-}
-
-addNumbers(10, 5);
-
-function withAFunction(callbackFunction) {
-callbackFunction();
-}
-
-// withAFunction(sayHello);
-
-function customEventListener(whatToListenFor, theFunctionToCall) {
-
-    // console.log("whatToListenFor", whatToListenFor)
-
-    if(whatToListenFor === "click") {
-        theFunctionToCall()
-    }
-
-}
-
-customEventListener("click", sayHello)
-
-var myButton = document.getElementById("button");
-
-myButton.addEventListener("mouseover", doWhenButtonClicked)
-
-function doWhenButtonClicked() {
-alert("yes Hello1");
-}
+## TODO
