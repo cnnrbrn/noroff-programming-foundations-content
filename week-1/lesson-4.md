@@ -60,6 +60,8 @@ logHello();
 
 Now the `logHello` function will run and log "Hello" to the browser console.
 
+<!-- <img src="images/function-process.png" alt="function process" width="600" height="313" /> -->
+
 ---
 
 ###### Create an empty function called `emptyFunction`
@@ -73,4 +75,67 @@ Now the `logHello` function will run and log "Hello" to the browser console.
 
 ## Arguments
 
-## TODO
+##
+
+Most of the time we want to pass variables into our functions so that the code inside the function can use them.
+
+When we use `console.log`, we are passing a `string` variable into the `log` function. The `log` function then prints that variable out.
+
+```js
+console.log("I am a string");
+```
+
+The variables that we pass in to functions are called arguments. Becuse they are variables, when we declare the function we can call the argument(s) whatever we want:
+
+```js
+// declare the function
+// this function has no argument
+function logHello() {
+    console.log("Hello");
+}
+```
+
+// call (execute) the function
+sayHello();
+
+// declare a function with one argument
+// arguments can be
+function withAnArgument(message) {
+console.log(message);
+}
+
+// call the function
+withAnArgument("this is an argument version 2")
+
+function addNumbers(number1, number2) {
+var sum = number1 + number2;
+// console.log(sum);
+}
+
+addNumbers(10, 5);
+
+function withAFunction(callbackFunction) {
+callbackFunction();
+}
+
+// withAFunction(sayHello);
+
+function customEventListener(whatToListenFor, theFunctionToCall) {
+
+    // console.log("whatToListenFor", whatToListenFor)
+
+    if(whatToListenFor === "click") {
+        theFunctionToCall()
+    }
+
+}
+
+customEventListener("click", sayHello)
+
+var myButton = document.getElementById("button");
+
+myButton.addEventListener("mouseover", doWhenButtonClicked)
+
+function doWhenButtonClicked() {
+alert("yes Hello1");
+}

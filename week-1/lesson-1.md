@@ -75,7 +75,6 @@ Keep your js files in a folder called `js`. Create a file called `script.js` in 
 ### A note on semi-colons
 
 
-
 ### Setting up Visual Studio Code (VSCode) as your editor
 
 VSCode comes with built-in formatting. Right-click anywhere inside a file and select `Format Document`.
@@ -112,23 +111,32 @@ Single-line comments are often combined together:
 
 ## Variables
 
-Variables are how a programming language stores information in a computer's memory. Once stored in memory, we can act on and use this information in other parts of our program.
+Variables are how a programming language stores information in a computer's memory. We can think of them as containers for data and once stored there, we can act on and use this data in other parts of our program.
 
-Variable names must start with a letter (a to z or A to Z), dollar sign (\$) or underscore (\_). We are only going to use lowercase letters to begin our variable names.
+<img src="/images/variable-containers.png" alt="variable containers" width="379" height="110" />
 
-Variables are declared with the `var` keyword. (We will use the `const` and `let` variables to declare variables in a later course.)
+In JavaScript, variables don't have types, but the data the variables hold do.
 
-We are going to look at these three types of variables:
+We are going to look at these three types of data:
 
 -   `string`
 -   `number`
 -   `boolean`
 
-### Strings
+<img src="/images/variable-types.png" alt="variable types" width="379" height="114" />
+
+## Declaring variables
+
+Variables are declared with the `var` keyword. (We will use the `const` and `let` variables to declare variables in a later course.)
+
+Variable names must start with a letter (a to z or A to Z), dollar sign (\$) or underscore (\_). We are only going to use lowercase letters to begin our variable names.
+
+
+## Strings
 
 Strings are pieces of text. They can range in size from one character like `a` to a whole book of characters.
 
-They're enclosed in either single `'` or double `"` quotes. You can use either but stick with one throughout your code.
+They're enclosed in either single `'` or double `"` quotes. You can use either but stick with one throughout your code. We'll use double quotes in the course material.
 
 Let's create our first string variable. To declare a variable we use `var` and a name of our choice:
 
@@ -136,7 +144,9 @@ Let's create our first string variable. To declare a variable we use `var` and a
 var pet = "dog";
 ```
 
-We're storing the string (text) "dog" in a variable called `pet`.  `pet` now has the value of "dog". 
+We're storing the string "dog" in a variable (container) called `pet`. We can say we've `assigned` the value "dog" to `pet`, and now `pet` contains the value "dog".
+
+<img src="/images/variable-string.png" alt="variable string" width="167" height="114" />
 
 We can now use that variable anywhere in our code:
 
@@ -146,6 +156,8 @@ console.log(pet);
 
 ---
 
+Let's store a different string in the variable called `pet`. 
+
 Create your first JavaScript variable:
 
 ###### Create a variable called `pet` with a value of "cat"
@@ -153,7 +165,7 @@ Create your first JavaScript variable:
 
 ---
 
-Letter case matters in JavaScript. "Cat" is not equal to "cat". In the practice question above, if you give the variable a value of "Cat", the code checker will complain that's it looking for "cat".
+Letter case matters in JavaScript. "Cat" is not equal to "cat". In the question above, if you give the variable a value of "Cat", the code checker will complain that's it looking for "cat".
 
 In JavaScript we would say
 
@@ -164,5 +176,52 @@ In JavaScript we would say
 
 (We will get to equality operators like `!==` soon)
 
+### Joining strings together
 
-## Other tools
+We can join strings together using the `+` sign. This is technically called `concatenation` but we'll call it joining.
+
+```js
+var letters = "a" + "b";
+
+console.log(letters);
+ // "ab"
+```
+
+Let's assign those string values to variables and then join them:
+
+```js
+var letter1 = "a";
+var letter2 = "b";
+
+var letters = letter1 + letter2;
+
+console.log(letters);
+ // "ab"
+```
+
+###### Join the strings "rab" and "bit" and assign them to a variable called `animal`
+~~parser js strings joinStrings~~
+
+---
+
+Anything inside quotes is a string, even numbers. The variable `seven` below has a string value.
+
+```js
+var seven = "7";
+```
+
+###### Create a variable called `four` with a string value of "4"
+~~parser js strings numberAsString~~
+
+
+## Numbers
+
+Numbers in JavaScript can be both integers (whole numbers) and decimals.
+
+```js
+var integer = 6;
+var decimal = 5.1;
+```
+
+###### Create a variable called `four` with a number value of 4
+~~parser js strings numberAsNumber~~
