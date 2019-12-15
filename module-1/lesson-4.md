@@ -190,5 +190,5 @@ Section 5. Iterating with Loops
 
 
 ---
-- [Go to lesson module assignment](ma) 
+- [Go to the module assignment](ma) 
 ---
