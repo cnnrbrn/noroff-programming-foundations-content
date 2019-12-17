@@ -161,6 +161,18 @@ var isLoggedIn = true;
 
 <img src="/images/variable-boolean.png" alt="variable boolean" style="max-width: 242px" />
 
+Note that there are no quotes around boolean values.
+
+The variable `badBoolean` below has a `string` value, so it's not a boolean.
+```js
+var badBoolean = "true";
+```
+
+The variable `properBoolean` below has a boolean value.
+```js
+var properBoolean = true;
+```
+
 ###### Create a variable called `lightIsOn` and initialise it with a value of false
 ~~parser js booleans firstBoolean~~
 
