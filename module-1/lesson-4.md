@@ -86,6 +86,7 @@ The result here is exactly the same, we've just modified the condition to check 
 
 ---
 
+<a id="arrayloops"></a>
 ## Looping through arrays
 
 You can think of `arrays` as lists or collections of variables. We will cover them more in module 2, but here we will write code to loop over a list of colours.
@@ -135,6 +136,7 @@ This would log:
 
 Let's do that in a loop.
 
+<a id="arraylength"></a>
 We need to know how many items are in the array, so that the `for` loop knows when to exit.
 
 We can get the amount of items in an array using its `length` property:
@@ -148,7 +150,7 @@ console.log(numberOfColours)
 We are going to start the loop at `0`, since that is the first index of the array:
 
 ```js
-for(i = 0; i < numberOfColours; i++) {
+for(var i = 0; i < numberOfColours; i++) {
     console.log(colours[i]);
 }
 ```

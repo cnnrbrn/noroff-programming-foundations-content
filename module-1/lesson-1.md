@@ -116,7 +116,7 @@ Remove the code inside the `<script>` tags and add a `src` attribute:
 </html>
 ```
 
-The `root` of your project is the parent folder for all your files. Until you start using advanced tools, only `.html` files should be in the root. Keep other types of files in folders dedicatd to them.
+The `root` of your project is the parent folder for all your files. Until you start using advanced tools, only `.html` files should be in the root. Keep other types of files in folders dedicated to them.
 
 Keep your js files in a folder called `js`. Create a file called `script.js` in that folder.
 
