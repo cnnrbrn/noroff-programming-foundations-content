@@ -147,22 +147,9 @@ We can store multiple variables in an item using `objects`.
 
 ---
 
-<!-- In [lesson 3](3) we'll look at `objects`. -->
-
-In lesson 3 we'll look at `objects` and `arrays of objects`.
+In [lesson 3](3) we'll look at `objects` and `arrays of objects`.
 
 ---
 
-<!-- ## Objects
-
-`Objects` are used to store related variables. Variables inside objects are called `properties`. Everthing in an object lives inside curly braces: `{}`
-
-The first *Norogram* post object, the first item in the array, would look like this:
-
-```js
-{
-    imageUrl: "https://path/to/crab",
-    likeCounter: 80,
-    likedByUser: false
-}
-``` -->
+- [Go to lesson 3](3) 
+---
