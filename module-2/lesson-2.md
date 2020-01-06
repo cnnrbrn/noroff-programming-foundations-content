@@ -18,12 +18,12 @@ var colours = ["red", "blue", "green", "yellow"];
 
 Arrays can hold any kind of values.
 
-Here is an array of numbers.
+Here is an array of numbers:
 ```js
 var numbers = [6, 54, 17, 108];
 ```
 
-Here is an array of booleans.
+Here is an array of booleans:
 ```js
 var booleans = [true, false, false, true];
 ```
