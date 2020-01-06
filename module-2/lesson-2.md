@@ -141,7 +141,7 @@ Posts on *Norogram* would only include three variables:
 
 <img src="/images/norogram.png" alt="Norogram" style="max-width: 600px" />
 
-According to the diagram we need an array of three items (posts), and each item has three variables.
+According to the diagram we need an array of three items (posts), and each item has three variables: `imageUrl`, `likeCounter` and `likedByUser`.
 
 We can store multiple variables in an item using `objects`.
 
