@@ -135,9 +135,9 @@ Let's say we wanted to build a simple Instagram clone, called *Norogram*.
 
 Posts on *Norogram* would only include three variables:
 
-- `imageUrl`, which would be a URL `string` like `https://path/to/crab`
+- `imageUrl`, which would be a URL `string` like `https://path/to/bee-picture`
 - `likeCounter`, which would be a `number` like `80`
-- `likedByUser` - whether or not you, the user, had liked the image. This would be a `boolean` value - `true` or `false` 
+- `likedByUser` - whether or not the user has liked the image. This would be a `boolean` value - `true` or `false` 
 
 <img src="/images/norogram.png" alt="Norogram" style="max-width: 600px" />
 
