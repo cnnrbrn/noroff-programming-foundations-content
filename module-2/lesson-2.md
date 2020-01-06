@@ -149,7 +149,7 @@ We can store multiple variables in an item using `objects`.
 
 <!-- In [lesson 3](3) we'll look at `objects`. -->
 
-In lesson 3 we'll look at `objects`.
+In lesson 3 we'll look at `objects` and `arrays of objects`.
 
 ---
 
