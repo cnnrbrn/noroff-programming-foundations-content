@@ -37,7 +37,7 @@ var myString = "dog";
 (myString === "dog") // true
 
 // is myString not equal to "cat">
-(myString 1== "cat") // true
+(myString !== "cat") // true
 
 ```
 
