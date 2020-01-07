@@ -299,10 +299,9 @@ In the JavaScript 1 course, you will see how we can use this technique to create
 
 ---
 
-<!-- In [lesson 3](3) we'll look at `objects` and `arrays of objects`. -->
-In lesson 4 we'll look at `functions`.
+In [lesson 4](4) we'll look at `functions`.
 
 ---
 
-<!-- - [Go to lesson 3](3) 
---- -->
+- [Go to lesson 4](4) 
+---
