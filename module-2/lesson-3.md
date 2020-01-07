@@ -49,14 +49,14 @@ var dog = {
 We can access an object's properties using dot `.` notation.
 
 
-To get the `dog`'s name:
+To get the `dog`'s `name` value:
 
 ```js
 console.log(dog.name);
 // "Tripod"
 ```
 
-To get the `dog`'s breed:
+To get the `dog`'s `breed` value:
 
 ```js
 console.log(dog.breed);
@@ -127,7 +127,7 @@ console.log(posts.length);
 // 1
 ```
 
-Let's use a `for loop` to loop through the `posts` array and console log the properties in the object.
+Let's use a `for loop` to loop through the `posts` array and console log the properties' values in the object.
 
 First, let's just log the whole object.
 
@@ -150,7 +150,7 @@ This will log the whole object:
 // }
 ```
 
-Now let's get the `imageUrl` property of the item using dot `.` notation:
+Now let's get the `imageUrl` property value of the item using dot `.` notation:
 
 ```js
 for(var i = 0; i < posts.length; i++) {
@@ -166,7 +166,7 @@ for(var i = 0; i < posts.length; i++) {
 }
 ```
 
-Let's log all the properties:
+Let's log all the properties' values:
 
 ```js
 for(var i = 0; i < posts.length; i++) {
@@ -207,7 +207,7 @@ var posts = [
 
 We use the same `for loop` no matter how many items in the array.
 
-Let's log only the `imageUrl`:
+Let's log only the `imageUrl` value:
 
 ```js
 for(var i = 0; i < posts.length; i++) {
@@ -216,7 +216,7 @@ for(var i = 0; i < posts.length; i++) {
 }
 ```
 
-This will log each `imageUrl`:
+This will log each `imageUrl` value:
 
 ```js
 // "https://path/to/bee-picture"
@@ -269,7 +269,7 @@ This will log:
 // 34
 ```
 
-Let's log all the properties:
+Let's log all the properties' values:
 
 ```js
 for(var i = 0; i < posts.length; i++) {
@@ -295,7 +295,7 @@ This will log:
 
 ---
 
-In the JavaScript 1 course, you will see how we can use this method to create the `src` attributes for `img` tags and populate other HTML content.
+In the JavaScript 1 course, you will see how we can use this technique to create the `src` attributes for `img` tags and populate other HTML content.
 
 ---
 
