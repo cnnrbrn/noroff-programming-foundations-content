@@ -295,7 +295,82 @@ This will log:
 
 ---
 
-In the JavaScript 1 course, you will see how we can use this technique to create the `src` attributes for `img` tags and populate other HTML content.
+## A real world example of an array of objects
+
+### APIs
+
+A `REST` `API` is one way to fetch data from a server.
+
+`API` stands for `A`pplication `P`rogramming `I`nterface. 
+
+An `API` is a way for programs to communicate with each other. 
+
+`REST` stands for `Representational state transfer`.
+
+A `REST` `API` gives us `URL`s that allow a browser to communicate with a server and fetch data that it can use JavaScript to loop over and display.
+
+The data that a REST API sends to the browser will look a lot like the arrays of objects that we've been discussing.
+
+Let's take a look at an example.
+
+### Testing a free API
+
+There are many free APIs frontend developers can use to test fetching data.
+
+They can be found through google searches or on sites like [Rapid API](https://rapidapi.com/collection/list-of-free-apis).
+
+A nice and simple API URL to use and display an array of objects is `https://elephant-api.herokuapp.com/elephants`. This URL will fetch an array of elephant objects.
+
+A good way to see the data we can fetch from a server is to use [Postman](https://www.getpostman.com/downloads/).
+
+To fetch data from an API we use a `GET` request. (A `POST` request sends data to the server).
+
+Once Postman is installed, enter `https://elephant-api.herokuapp.com/elephants` in the GET field and hit `Send`:
+
+<img src="/images/postman.png" alt="Postman" style="max-width: 600px" />
+
+Below you will see the API returns an array of objects like this:
+
+```js
+[
+    {
+        "_id": "5cf1d0db3cfbe0fcbb6c4c93",
+        "index": 1,
+        "name": "Abul-Abbas",
+        "affiliation": "Charlemagne",
+        "species": "Asian",
+        "sex": "Male",
+        "fictional": "false",
+        "dob": "Unavailable",
+        "dod": "810",
+        "wikilink": "https://en.wikipedia.org/wiki/Abul-Abbas",
+        "image": "https://elephant-api.herokuapp.com/pictures/001.jpg",
+        "note": "An elephant given to Carolingian emperor Charlemagne by the Abbasid caliph Harun al-Rashid."
+    },
+    {
+        "_id": "5cf1d0db8c4845fb358b91d6",
+        "index": 2,
+        "name": "Arjuna",
+        "affiliation": "Dasara",
+        "species": "Asian",
+        "sex": "Male",
+        "fictional": "false",
+        "dob": "1960",
+        "dod": "-",
+        "wikilink": "https://en.wikipedia.org/wiki/Arjuna_(elephant)",
+        "image": "https://elephant-api.herokuapp.com/pictures/002.jpg",
+        "note": "A lead elephant of the world-famous Mysore Dasara procession."
+    }
+]
+```
+
+There will be many more objects than the two displayed above.
+
+This looks a lot like our *Norogram* `posts` array, the objects just have more properties.
+
+---
+
+In the JavaScript 1 course, we will use API calls to fetch data, loop over it with JavaScript and display it with HTML and CSS.
 
 ---
 
