@@ -321,7 +321,7 @@ They can be found through google searches or on sites like [Rapid API](https://r
 
 A nice and simple API URL to use and display an array of objects is `https://elephant-api.herokuapp.com/elephants`. This URL will fetch an array of elephant objects.
 
-A good way to see the data we can fetch from a server is to use [Postman](https://www.getpostman.com/downloads/).
+A good way to test fetching data from a server is to use [Postman](https://www.getpostman.com/downloads/).
 
 To fetch data from an API we use a `GET` request. (A `POST` request sends data to the server).
 
