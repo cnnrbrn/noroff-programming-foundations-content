@@ -396,3 +396,10 @@ AddTwoNumbers(3, 4);
 
 ---
 
+## Acivities
+
+### Watch
+
+[Programming Foundations: Functions](https://scrimba.com/c/cnkpKnhZ)
+
+---
