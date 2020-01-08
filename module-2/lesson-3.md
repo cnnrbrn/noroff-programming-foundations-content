@@ -325,7 +325,11 @@ A good way to test fetching data from a server is to use [Postman](https://www.g
 
 To fetch data from an API we use a `GET` request. (A `POST` request sends data to the server).
 
-Once Postman is installed, enter `https://elephant-api.herokuapp.com/elephants` in the GET field and hit `Send`:
+Once Postman is installed, click the `+` tab to create a new request:
+
+<img src="/images/postman-plus-tab.png" alt="Postman plus tab" style="max-width: 276px" />
+
+Enter `https://elephant-api.herokuapp.com/elephants` in the GET field and hit `Send`:
 
 <img src="/images/postman.png" alt="Postman" style="max-width: 600px" />
 
@@ -375,6 +379,14 @@ In the JavaScript 1 course, we will use API calls to fetch data, loop over it wi
 ---
 
 In [lesson 4](4) we'll look at `functions`.
+
+---
+
+## Acivities
+
+### Watch
+
+[Programming Foundations: Objects in arrays](https://scrimba.com/c/c77r6nUd)
 
 ---
 
