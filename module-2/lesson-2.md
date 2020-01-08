@@ -151,5 +151,13 @@ In [lesson 3](3) we'll look at `objects` and `arrays of objects`.
 
 ---
 
+## Acivities
+
+### Watch
+
+[Programming Foundations: Arrays](https://scrimba.com/c/ckPyJrt7)
+
+---
+
 - [Go to lesson 3](3) 
 ---
