@@ -155,7 +155,7 @@ In [lesson 3](3) we'll look at `objects` and `arrays of objects`.
 
 ### Watch
 
-[Programming Foundations: Arrays](https://scrimba.com/c/ckPyJrt7)
+[Programming Foundations: Arrays and Loops](https://scrimba.com/c/ckPyJrt7)
 
 ---
 
