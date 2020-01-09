@@ -192,6 +192,7 @@ The following Scrimba video covers variables and briefly examines comparison ope
 
 ---
 
+<a id="typeof"></a>
 ## Checking data types
 
 We can use the `typeof` operator to check what type of data a variable holds. We can use it with or without brackets.
