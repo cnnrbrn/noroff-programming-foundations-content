@@ -64,6 +64,7 @@ To carry out the above, we use `if...else statements.`
 
 <img src="/images/if-statement.png" alt="if statement" style="max-width: 450px"/>
 
+<a id="if-else-example"></a>
 Perhaps you need to check whether a user is logged in:
 
 ```js
