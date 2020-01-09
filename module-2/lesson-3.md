@@ -97,7 +97,7 @@ var posts = [];
 
 Since this version of *Norogram* has one item, we need one item in the array, the object above.
 
-<a href="object-in-array"></a>
+<a id="object-in-array"></a>
 When we store objects in arrays, we don't need the variable name:
 
 ```js
