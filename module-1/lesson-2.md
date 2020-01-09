@@ -14,6 +14,7 @@ We are going to look at these three types of data:
 
 <img src="/images/variable-types.png" alt="variable types" style="max-width: 379px"/>
 
+<a id="declaring-variables"></a>
 ## Declaring variables
 
 Before we can use variables, we need to`declare` (create) them.
