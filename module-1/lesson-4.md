@@ -18,6 +18,7 @@ What if we wanted to log 1 to a number stored in a variable? Or from a number st
 
 That's where loops come in.
 
+<a id="for-loop"></a>
 ## for loop
 
 ```js
