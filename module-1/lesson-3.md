@@ -188,7 +188,7 @@ The `break` keyword is important. If you leave it out, the code will not break f
 
 If you find yourself writing more than one `else if` statement, consider using a `switch` instead.
 
-
+<a id="assignment-v-comparison"></a>
 ## Assignment vs comparison 
 
 In the previous lesson we assigned values to variables using the `=` assignment operator.
