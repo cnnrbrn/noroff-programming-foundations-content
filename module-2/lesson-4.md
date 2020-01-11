@@ -400,6 +400,11 @@ AddTwoNumbers(3, 4);
 
 ### Watch
 
-[Programming Foundations: Introduction to Functions](https://scrimba.com/c/cnkpKnhZ)
+Scrimba: [Programming Foundations: Introduction to Functions](https://scrimba.com/c/cnkpKnhZ)
+
+---
+
+[A good Youtube tutorial on functions](https://www.youtube.com/watch?v=AY6X5jZZ_JE)
+The functon content starts around 3:25.
 
 ---
