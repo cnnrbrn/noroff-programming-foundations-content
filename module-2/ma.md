@@ -16,7 +16,7 @@
 
 ## Submission
 
-- Create a repository in your GitHub account called `prog-found-ma2` and make sure it's public
+- Create a repository in your GitHub account called `prog-found-ma2` and __make sure it's public__
 - Create a file called `script.js`
 - Write your answers inside this file with a comment above each answer indicating the question number:
 
