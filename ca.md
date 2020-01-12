@@ -10,7 +10,7 @@ Some of the questions don't provide variable names, and you must come up with th
 
 ---
 
-> If you finish the course assignment and want to look ahead at some of the concepts we'll be covering in JavaScript 1, you can do so [here](../looking-ahead). This is completely optional.
+> If you finish the course assignment and want to look ahead at some of the concepts we'll be covering in JavaScript 1, you can do so [here](/programming-foundations/looking-ahead). This is completely optional.
 
 ---
 
@@ -153,6 +153,6 @@ Call `outerFunction` and pass in the `innerFunction` variable.
 
 ---
 
-[Looking ahead to JavaScript 1](../looking-ahead)
+[Looking ahead to JavaScript 1](/programming-foundations/looking-ahead)
 
 ---
