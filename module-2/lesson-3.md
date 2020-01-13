@@ -23,7 +23,7 @@ var dog = {
     name: "Tripod",
     breed: "labrador",
     numberOfLegs: 3
-}
+};
 ```
 
 We've created a variable called `dog` with a value type of `object`. The `object` has three properties, `name`, `breed` and `numberOfLegs`.
@@ -84,7 +84,7 @@ var postItem = {
     imageUrl: "https://path/to/bee-picture",
     likeCounter: 80,
     likedByUser: true
-}
+};
 ```
 
 Because we want an array of items to loop through, we'll store this object in an array.
