@@ -43,7 +43,7 @@ var dog = {
     name: "Tripod", // name is the key, "Tripod" is the value, a string value
     breed: "labrador", // breed is the key, "labrador" is the value, a string value
     numberOfLegs: 3, // numberOfLegs is the key, 3 is the value, a number value
-}
+};
 ```
 
 We can access an object's properties using dot `.` notation.
