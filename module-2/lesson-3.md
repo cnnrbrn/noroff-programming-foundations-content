@@ -150,7 +150,7 @@ This will log the whole object:
 //     likedByUser: true
 // }
 ```
-
+<a id="properties-from-objects-in-arrays"></a>
 Now let's get the `imageUrl` property value of the item using dot `.` notation:
 
 ```js
