@@ -7,8 +7,6 @@ Functions in JavaScript often appear in what seem to be strange places.
 
 Understanding functions is very important, but it will take time to get used to them - that will happen as you use them more and more.
 
-Here we only introduce them. In the JavaScript 1 course we will look at them in more depth.
-
 ---
 
 Let's consider one of the main uses for functions:
@@ -265,7 +263,7 @@ logWord("three");
 ```
 ---
 
-Let's go back to our *Norogram* posts and add the word `likes` next to the `likeCounter` variable:
+Let's look at a simple Instagram clone called *Norogram*:
 
 <img src="/images/norogram-with-likes.png" alt="Norogram" style="max-width: 600px" />
 
