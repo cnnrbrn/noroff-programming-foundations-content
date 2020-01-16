@@ -1,4 +1,4 @@
-# Lesson 4: Functions
+# Functions
 
 It is often a source of confusion to new students to see functions all over the
 code and not understand what they are used for.
