@@ -32,26 +32,14 @@ https://www.youtube.com/watch?v=AY6X5jZZ_JE
 ##### String methods
 
 - trim()
-- toLowerCase()
-- toUpperCase()
 - replace()
+- length
 
 ##### Template literals
 
 https://flaviocopes.com/javascript-template-literals/
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-
----
-
-### Array methods
-
-##### filter method
-
-The `filter` method creates a filtered array from an existing array. We will use it to filter results on a page when typing in a form's input element.
-
-https://alligator.io/js/filter-array-method/
-https://www.w3schools.com/jsref/jsref_filter.asp
 
 ---
 
@@ -108,16 +96,5 @@ It uses something called `promises`. Promises use `asynchronous` code which is g
 
 Regex is - basically - used to check if a string value matches a pattern. It can be used for things like checking if a user entered an email address in the correct format. We are going to use regex to validate form inputs, but we won't go into too much detail on it.
 
-HTML form inputs also have built-in ways to do this kind of validation.
-
 ---
 
-### localStorage
-
-localStorage provides a way to store variables in the browser and then retrieve them.
-
-So we can save a variable on one page, go to another page, and have access to that same variable on the other page.
-
-https://blog.logrocket.com/the-complete-guide-to-using-localstorage-in-javascript-apps-ba44edb53a36/
-
----
