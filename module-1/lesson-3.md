@@ -97,26 +97,7 @@ Sometimes you'll need to check multiple conditions.
 
 <img src="/images/if-else.png" alt="if else statement" style="max-width: 450px"/>
 
-You might need to check that a number is
-- less than 5
-- greater than or equal to 5
-- greater than or equal to 9
-
-```js
-var ageOfCar = 6;
-
-if(ageOfCar < 5) {
-    console.log("The car is less than 5 years old");
-}
-else if(ageOfCar >= 5) {
-    console.log("The car is 5 years old or older);
-}
-else if(ageOfCar >= 9) {
-    console.log("The car is 9 years old or older);
-}
-```
-
-Or you may need to check for multiple values of a string:
+The code below will check for multiple values of a string:
 
 ```js
 var colour = "red";
