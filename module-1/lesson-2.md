@@ -101,8 +101,8 @@ console.log(letters);
  // "ab"
 ```
 
-###### Join the strings "rab" and "bit" and assign them to a variable called `animal`
-~~parser js strings stringConcatenation~~
+<!-- ###### Join the strings "rab" and "bit" and assign them to a variable called `animal`
+~~parser js strings stringConcatenation~~ -->
 
 ---
 
