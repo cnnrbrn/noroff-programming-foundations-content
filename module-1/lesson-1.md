@@ -150,6 +150,14 @@ The video below discusses comments.
 
 ---
 
--   [Go to lesson 2](2)
+## Lesson Task
+
+There is a practice question in the master branch of [this repo](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson1).
+
+Attempt the answer before checking against the example answer in the [answer branch](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson1/tree/answer) of the repo.
+
+---
+
+[Go to lesson 2](2)
 
 ---
