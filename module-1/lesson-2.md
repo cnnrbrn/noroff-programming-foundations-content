@@ -311,5 +311,13 @@ The video below is an introduction to the `typeof` operator.
 ~~parser js variables typeofNumber~~ -->
 
 ---
+
+## Lesson Task
+
+There are practice questions in the master branch of [this repo](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson2).
+
+Attempt the answers before checking against the example answers in the [answers branch](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson2/tree/answers) of the repo.
+
+---
 - [Go to lesson 3](3) 
 ---
