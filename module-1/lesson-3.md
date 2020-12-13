@@ -26,31 +26,31 @@ Comparison operators compare their operands (the values on either side of the op
     <tr>
         <td>!==</td>
         <td>not equal to</td>
-        <td>3 `!==` 2</td>
+        <td>3 !== 2</td>
         <td>true</td>
     </tr>
     <tr>
         <td>></td>
         <td>greater than</td>
-        <td>6 `>` 4</td>
+        <td>6 > 4</td>
         <td>true</td>
     </tr>
     <tr>
         <td>>=</td>
         <td>greater than or equal to</td>
-        <td>5 `>` 4</td>
+        <td>5 > 4</td>
         <td>true</td>
     </tr>
     <tr>
         <td><</td>
         <td>less than</td>
-        <td>5 `>` 4</td>
+        <td>5 > 4</td>
         <td>false</td>
     </tr>
     <tr>
         <td><=</td>
         <td>less than or equal to</td>
-        <td>3 `>` 4</td>
+        <td>3 > 4</td>
         <td>true</td>
     </tr>
 </table>
@@ -71,22 +71,20 @@ var myNumber = 7;
 var myString = "dog";
 
 // is myNumber greater than 8?
-(myNumber > 8)(
-    // false
+(myNumber > 8)
+// false
 
-    // is myNumber less than or equal to 7?
-    myNumber <= 8
-)(
-    // true
+// is myNumber less than or equal to 7?
+(myNumber <= 8)
+// true
 
-    // is myString exactly equal to "dog">
-    myString === "dog"
-)(
-    // true
+// is myString exactly equal to "dog">
+(myString === "dog")
+// true
 
-    // is myString not equal to "cat">
-    myString !== "cat"
-); // true
+// is myString not equal to "cat">
+(myString !== "cat")
+// true
 ```
 
 These operators are commonly used with conditional statements (covered below) to make a code decision depending on the value of a variable.
