@@ -1,6 +1,5 @@
 # Lesson 3 - Making decisions
 
-
 ## Comparison operators
 
 Comparison operators compare their operands (the values on either side of the operator) and return a boolean value.
@@ -11,15 +10,59 @@ Comparison operators compare their operands (the values on either side of the op
 
 #### List of operators
 
-| Operator      | Description               | Example  | Result 
+<table>
+    <thead>
+        <th>Operator</th>
+        <th>Description</th>
+        <th>Example</th>
+        <th>Result</th>
+    </thead>
+    <tr>
+        <td>===</td>
+        <td>equal to</td>
+        <td>3 `===` 2</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td>!==</td>
+        <td>not equal to</td>
+        <td>3 `!==` 2</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>></td>
+        <td>greater than</td>
+        <td>6 `>` 4</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td>>=</td>
+        <td>greater than or equal to</td>
+        <td>5 `>` 4</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td><</td>
+        <td>less than</td>
+        <td>5 `>` 4</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td><=</td>
+        <td>less than or equal to</td>
+        <td>3 `>` 4</td>
+        <td>true</td>
+    </tr>
+</table>
+
+<!-- | Operator      | Description               | Example  | Result
 | ------------- |:----------------------:   | :-----:  |  :---:
-| `===`           | equal to                  | 3 `===` 2  |  false 
-| `!==`           | not equal to              | 3 `!==` 2  |  true  
-| `>`             | greater than              | 6 `>` 4    |  true  
+| `===`           | equal to                  | 3 `===` 2  |  false
+| `!==`           | not equal to              | 3 `!==` 2  |  true
+| `>`             | greater than              | 6 `>` 4    |  true
 | `>=`            | greater than or equal to  | 5 `>=` 5   |  true
 | `<`             | less than                 | 5 `>` 4    |  false
-| `<=`            | less than or equal to     | 3 `>` 4    |  true
-
+| `<=`            | less than or equal to     | 3 `>` 4    |  true -->
 
 ---
 
@@ -28,22 +71,47 @@ var myNumber = 7;
 var myString = "dog";
 
 // is myNumber greater than 8?
-(myNumber > 8) // false
+(myNumber > 8)(
+    // false
 
-// is myNumber less than or equal to 7?
-(myNumber <= 8) // true
+    // is myNumber less than or equal to 7?
+    myNumber <= 8
+)(
+    // true
 
-// is myString exactly equal to "dog">
-(myString === "dog") // true
+    // is myString exactly equal to "dog">
+    myString === "dog"
+)(
+    // true
 
-// is myString not equal to "cat">
-(myString !== "cat") // true
-
+    // is myString not equal to "cat">
+    myString !== "cat"
+); // true
 ```
 
 These operators are commonly used with conditional statements (covered below) to make a code decision depending on the value of a variable.
 
->You may see the `==` and `!=` operators. These are similar to `===` and `!==`, and we'll cover the differences between them in module 2. For now it's enough to know that you should always use `===` instead of `==` and `!==` instead of `!=`.
+## == and != vs === and !==
+
+You may see the `==` and `!=` operators. These are similar to `===` and `!==`.
+
+The `===` operator checks that both the values and type of the variables being compared are equal, whereas `==` only checks that the value and not the type are equal.
+
+Using `===` the following returns false and one value is a number value and one is a string value.
+
+```js
+7 === "7";
+// false
+```
+
+Making the same comparison with `==` returns true, as the differences in type is ignored.
+
+```js
+7 == "7";
+// true
+```
+
+> Always === and !==. To avoid bugs and odd behaviour it's important to check the type of the variable as well as the value.
 
 ## Conditional statements
 
@@ -70,10 +138,9 @@ Perhaps you need to check whether a user is logged in:
 ```js
 var isLoggedIn = true;
 
-if(isLoggedIn === true) {
+if (isLoggedIn === true) {
     console.log("The user is logged in");
-}
-else {
+} else {
     console.log("The user is logged out");
 }
 ```
@@ -83,95 +150,107 @@ Or whether a user has entered valid data into an input field in a form:
 ```js
 var inputIsValid = false;
 
-if(inputIsValid === false) {
+if (inputIsValid === false) {
     // show error message
-}
-else {
+} else {
     // hide error message
 }
 ```
 
-###  if...else if...else
+The video below examines if statements.
 
-Sometimes you'll need to check multiple conditions.
+<iframe src="https://player.vimeo.com/video/490374916" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-<img src="/images/if-else.png" alt="if else statement" style="max-width: 450px"/>
+<a href="https://vimeo.com/490374916/7525452c5d" target="_blank">Watch on Vimeo</a>
 
-The code below will check for multiple values of a string:
+<a href="https://github.com/NoroffFEU/if-statements/blob/master/script.js" target="_blank">Code from the video</a>
+
+### if...else if...else
+
+When you need to check multiple conditions, you use `else if` blocks, like in the video above.
+
+But reading multiple `else if` blocks becomes difficult, as this code from the video shows.
 
 ```js
-var colour = "red";
+var grade = 7;
+var letterGrade;
 
-if(colour === "blue") {
-    console.log("The colour is blue");
-}
-else if(colour === "red") {
-    console.log("The colour is red");
-}
-else {
-    console.log("The colour is neither blue nor red");
+if (grade === 10) {
+    letterGrade = "A";
+} else if (grade === 9) {
+    letterGrade = "A";
+} else if (grade === 8) {
+    letterGrade = "B";
+} else if (grade === 7) {
+    letterGrade = "C";
+} else {
+    letterGrade = "Unkown";
 }
 ```
 
-If we wanted to add more colour checks to the above code, we would need to add more `else if` statements. Our code would quickly become difficult read with so many `else if`s. In this scenario we can use `switch` statements.
+In this scenario it's time to turn to `switch` statements.
 
-### switch 
+### switch
 
-<!-- <img src="/images/switch.png" alt="switch statement" style="max-width: 450px"/> -->
+The code above converted to a switch statement would look like this:
 
 ```js
-var colour = "red";
+var grade = 7;
+var letterGrade;
 
-switch(colour) {
-    case "blue":
-        console.log("The colour is blue");
+switch (grade) {
+    case 10:
+    case 9:
+        letterGrade = "A";
         break;
-    case "red":
-        console.log("The colour is red");
+    case 8:
+        letterGrade = "B";
         break;
-    case "green":
-        console.log("The colour is green");
-        break;
-    case "yellow":
-        console.log("The colour is yellow");
+    case 7:
+        letterGrade = "C";
         break;
     default:
-        console.log("The colour is not blue, red, green or yellow");
+        letterGrade = "Unkown";
 }
-
 ```
 
-The `switch` statement receives a variable to check in parenthesis (round brackets). 
+The `switch` statement receives a variable to check in the parenthesis (round brackets).
 
 Inside the `curly braces` `{}` are several `case` blocks:
 
 ```js
-case "blue":
-    console.log("The colour is blue");
+case 8:
+    letterGrade = "B";
     break;
 ```
 
-The above means: in the `case` of `colour` being equal to "blue", run the code after the colon `:` and before the `break`.
+The above means: in the `case` of `grade` being equal to 8, run the code after the colon `:` and before the `break`.
 
 This is the equivalent of:
 
 ```js
-if(colour === "blue") {
-    console.log("The colour is blue");
+if (grade === 8) {
+    letterGrade = "B";
 }
 ```
 
 The code after `default:` runs if none of the conditions in the case blocks are true. It's like an `else` block in an `if..else if...else` statement.
 
-The `break` keyword is important. If you leave it out, the code will not break from the switch statement and will run the code in the default block.
+The `break` keyword is important. If you leave it out, the code will below will be executed so be sure to include it in your case blocks.
 
+<iframe src="https://player.vimeo.com/video/490429454" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/490429454/a23aa576f2" target="_blank">Watch on Vimeo</a>
+
+<a href="https://github.com/NoroffFEU/switch-statement/blob/master/script.js" target="_blank">Code from the video</a>
 
 ### When to use switch instead of if
 
 If you find yourself writing more than one `else if` statement, consider using a `switch` instead.
 
 <a id="assignment-v-comparison"></a>
-## Assignment vs comparison 
+
+## Assignment vs comparison
 
 In the previous lesson we assigned values to variables using the `=` assignment operator.
 
@@ -180,36 +259,29 @@ A common mistake is to accidentally use the `=` operator instead of a comparison
 ```js
 var myPet = "pig";
 
-if(myPet = "sheep") {
+if ((myPet = "sheep")) {
     console.log("My pet is a sheep");
-}
-else {
+} else {
     console.log("My pet is not a sheep");
 }
 ```
 
 Above, we've assigned "pig" to the variable `myPet` but in the `if` statement we've re-assigned `myPet` the value "sheep" because we've used the assignment operator rather than the equality comparison operator `===`.
 
-So this statement will always log "My pet is a sheep". 
+So this statement will always log "My pet is a sheep".
 
 If your `if` statements are behaving strangely, remember to check for this easy-to-make mistake.
 
----
+This video looks at the assignment operator (=) versus the comparison operator (===).
 
-## Acivities
+<iframe src="https://player.vimeo.com/video/490410473" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-#### Watch
-
-[LinkedIn Learning: Learning the JavaScript Language](https://www.linkedin.com/learning/learning-the-javascript-language-2/)
-
-Watch the following videos under section 4. Operators and Control Structures:
-
-- Simple comparisons
-- Logical operators
-- Conditionals: if
-- Conditionals: switch
-- Terse ifs
+<a href="https://vimeo.com/490410473/a48458dce1" target="_blank">Watch on Vimeo</a>
 
 ---
-- [Go to lesson 4](4) 
+
+---
+
+-   [Go to lesson 4](4)
+
 ---

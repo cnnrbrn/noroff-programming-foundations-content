@@ -2,19 +2,17 @@
 
 Variables are how a programming language stores information in a computer's memory. We can think of them as containers for data and once stored there, we can act on and use this data in other parts of our program.
 
-<img src="/images/variable-containers.png" alt="variable containers" style="max-width: 379px" />
+#####  Variables sitting in the computer's RAM - Random Access Memory
 
-In JavaScript, variables don't have types, but the data the variables hold do.
+<img src="/images/variable-containers.png" alt="variable containers" style="max-width: 379px; margin-top: -10px" />
 
-We are going to look at these three types of data:
+We are going to look at these types of data that JavaScript variables can store:
 
+-   `undefined`
 -   `string`
 -   `number`
 -   `boolean`
 
-<img src="/images/variable-types.png" alt="variable types" style="max-width: 379px"/>
-
-<a id="declaring-variables"></a>
 ## Declaring variables
 
 Before we can use variables, we need to`declare` (create) them.
@@ -29,6 +27,25 @@ Above we've created a variable called `pet`. We haven't given `pet` a value, so 
 
 Giving a variable a value when you declare it is called `initialising` the variable.
 
+---
+
+The video below is an introduction to variables.
+
+<iframe src="https://player.vimeo.com/video/489815427" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/489815427/af5a3f023c" target="_blank">Watch on Vimeo</a>
+
+---
+
+## `undefined` vs the `is not defined` error
+
+This video looks at the difference between the (valid) value `undefined` and the error `is not defined`.
+
+<iframe src="https://player.vimeo.com/video/489861232" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/489861232/a680be6f3c" target="_blank">Watch on Vimeo</a>
+
+---
 
 ## Strings
 
@@ -38,7 +55,7 @@ They're enclosed in either single `'` or double `"` quotes. At Noroff we use dou
 
 Let's create our first string variable.
 
-Variable names must start with a letter (`a` to `z` or `A` to `Z`), dollar sign `$` or underscore `_`. We are only going to use lowercase letters to begin our variable names.
+Variable names must start with a lower case letter (`a` to `z`), an upper case letter (`A` to `Z`), a dollar sign `$` or underscore `_`. We are only going to use lowercase letters to begin our variable names.
 
  To declare a variable we use `var`, a name of our choice and a value if we are initialising it.
 
@@ -48,39 +65,29 @@ var pet = "dog";
 
 We've initialised the variable `pet` with the string value "dog". We can say we've `assigned` the value "dog" to `pet`, and now `pet` contains the value "dog".
 
-<img src="/images/variable-string.png" alt="variable string" style="max-width: 167px" />
-
 We can now use that variable in our code:
 
 ```js
 console.log(pet);
 ```
 
----
+We use `camelCase` to name variables.
 
-Let's store a different string value in the variable called `pet`. 
-
-Create your first JavaScript variable:
-
-###### Create a variable called `pet` with a value of "cat"
-~~parser js strings firstString~~
-
----
-
-Letter case matters in JavaScript. "Cat" is not equal to "cat". In the question above, if you give the variable a value of "Cat", the code checker will complain that's it looking for "cat".
-
-In JavaScript we would say
+Using this method, the first word of a variable name starts with a lower case letter and subsequent words are joined to the first and begin with an upper case letter:
 
 ```js
-// "Cat" is not equal to "cat"
-"Cat" !== "cat"
+var loggedIn;
+var orderHasShipped;
+var lastName;
 ```
 
-(We will get to comparison operators like `!==` soon)
+Variables names cannot include spaces.
+
+---
 
 ### Joining strings together
 
-We can join strings together using the `+` sign. This is technically called `concatenation` but we'll call it joining.
+We can join strings together using the `+` sign. This is called `concatenation`.
 
 ```js
 var letters = "a" + "b";
@@ -101,20 +108,43 @@ console.log(letters);
  // "ab"
 ```
 
-<!-- ###### Join the strings "rab" and "bit" and assign them to a variable called `animal`
-~~parser js strings stringConcatenation~~ -->
+---
+
+Anything inside quotes is a string, even numbers. The variable `amount` below has a string value.
+
+```js
+var amount = "7";
+```
+
+In this video we take a look at `string` variables.
+
+<iframe src="https://player.vimeo.com/video/489970889" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/489970889/1b27bd47e0" target="_blank">Watch on Vimeo</a>
 
 ---
 
-Anything inside quotes is a string, even numbers. The variable `seven` below has a string value.
+## Selecting HTML elements with JavaScript
 
-```js
-var seven = "7";
-```
+Before we look at adding string variables to an HTML page, we need to look at how we can select and modify HTML elements using JavaScript's `document.querySelector` function.
 
-###### Create a variable called `four` with a string value of "4"
-~~parser js strings numberAsString~~
+<iframe src="https://player.vimeo.com/video/490143019" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
+<a href="https://vimeo.com/490143019/c5399cdcb3" target="_blank">Watch on Vimeo</a>
+
+---
+
+## Adding string variables to an HTML page
+
+In this video we will add string variables to HTML elements.
+
+<iframe src="https://player.vimeo.com/video/490167805" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/490167805/317016af51" target="_blank">Watch on Vimeo</a>
+
+<a href="https://github.com/NoroffFEU/adding-string-variables-to-html" target="_blank">Code from the video</a>
+
+---
 
 ## Numbers
 
@@ -125,26 +155,92 @@ var integer = 8;
 var decimal = 7.1;
 ```
 
-<img src="/images/variable-number.png" alt="variable number" style="max-width: 424px" />
-
-###### Create a variable called `four` with a number value of 4
-~~parser js numbers numberAsNumber~~
-
-
 ### Basic arithmetic operators
 
 We can use the following operators with numbers in JavaScript.
 
-| Operator      | Name           | Example  |
-| ------------- |:-------------: | -----:   |
-| +             | addition       | 3 + 2    |
-| -             | subtraction    | 7 - 1    |
-| *             | multiplication | 6 * 4    |
-| /             | division       | 9 / 3    |
-| %             | modulus        | 5 % 2    | 
+<table>
+    <thead>
+        <th>Operator</th>
+        <th style="text-align: center">Name</th>
+        <th>Example</th>
+    </thead>
+    <tr>
+        <td>+</td>
+        <td>addition</td>
+        <td>3 + 2</td>
+    </tr>
+    <tr>
+        <td>-</td>
+        <td>subtraction</td>
+        <td>7 - 1</td>
+    </tr>
+    <tr>
+        <td>*</td>
+        <td>multiplication</td>
+        <td>6 * 4</td>
+    </tr>
+    <tr>
+        <td>/</td>
+        <td>division</td>
+        <td>9 / 3</td>
+    </tr>
+    <tr>
+        <td>%</td>
+        <td>remainder</td>
+        <td>5 % 2</td>
+    </tr>
+</table>
 
+If you try to add a number value to a string version of a number like this:
 
-We will cover the `modulus` (sometimes called `remainder`) operator in a later course.
+```js
+7 + "7"
+```
+
+you will end up with `77` not `14`.
+
+This is because when one of the values is a string value, the `+` operator joins both values together as if they were both strings. It doesn't add them together as it would if all values were number values.
+
+You can convert a string version of a number to a proper number using the `parseInt` and `parseFloat` functions.
+
+To convert a number without a decimal point use parseInt.
+
+```js
+var integer = "7";
+var convertedInteger = parseInt(wholeNumber);
+// 7
+```
+
+To convert a number with a decimal point use parseFloat.
+
+```js
+var decimalNumber = "7.9";
+var convertedDecimalNumber = parseFloat(wholeNumber);
+// 7
+```
+
+---
+
+The remainder operator (sometimes called the modulus operator) returns the remainder of a division operation:
+
+```js
+var remainder = 5 % 2;
+console.log(remainder);
+// 1
+
+var remainder2 = 4 % 2;
+console.log(remainder2);
+// 0
+```
+
+This video looks at `number` variables.
+
+<iframe src="https://player.vimeo.com/video/490212936" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/490212936/d103dd7e13" target="_blank">Watch on Vimeo</a>
+
+<a href="https://github.com/NoroffFEU/number-variables" target="_blank">Code from the video</a>
 
 <!-- ###### Create a variable called `multiply` and initialise it with a value of 7 times 3
 ~~parser js numbers multiplyNumbers~~ -->
@@ -156,11 +252,8 @@ Boolean values are either `true` or `false`.
 
 ```js
 var isLoggedIn = true;
+var onSpecial = false;
 ```
-
-<!-- <img src="/images/variable-boolean.png" alt="variable boolean" style="max-width: 242px" /> -->
-
-<img src="/images/variable-boolean.png" alt="variable boolean" style="max-width: 242px" />
 
 ---
 
@@ -178,20 +271,10 @@ var properBoolean = true;
 
 ---
 
-###### Create a variable called `lightIsOn` and initialise it with a value of false
+<!-- ###### Create a variable called `lightIsOn` and initialise it with a value of false
 ~~parser js booleans firstBoolean~~
 
-We can produce boolean variables using `comparison operators`, which we'll look at in the next lesson.
-
----
-
-### Watch
-
-The following Scrimba video covers variables and briefly examines comparison operators.
-
-[Programming Foundations: Intro to Variables and Operators](https://scrimba.com/c/cdNRKKfk)
-
----
+We can produce boolean variables using `comparison operators`, which we'll look at in the next lesson. -->
 
 <a id="typeof"></a>
 ## Checking data types
@@ -216,37 +299,16 @@ typeof false;
 
 ```
 
-###### Write code that checks the type of the value: 23
-~~parser js variables typeofNumber~~
+The video below is an introduction to the `typeof` operator.
 
+<iframe src="https://player.vimeo.com/video/489917338" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
----
-## Acivities
+<a href="https://vimeo.com/489917338/d464da8262" target="_blank">Watch on Vimeo</a>
 
-#### Read
+<a href="https://github.com/NoroffFEU/typeof-operator" target="_blank">Code from the video</a>
 
-[Chapter 1](https://eloquentjavascript.net/01_values.html) from _Eloquent JavaScript_.
-
-Read up to the **Operators** section.
-
----
-
-#### Watch
-
-[LinkedIn Learning: Learning the JavaScript Language](https://www.linkedin.com/learning/learning-the-javascript-language-2/)
-
-Watch the following videos:
-
-Section 2. Variables and Types:
-
-- Declaring and assigning variables
-- Strings
-- Numbers 
-- Booleans
-
-Section 4. Operators and Control Structures:
-
-- Arithmetic operators
+<!-- ###### Write code that checks the type of the value: 23
+~~parser js variables typeofNumber~~ -->
 
 ---
 - [Go to lesson 3](3) 
