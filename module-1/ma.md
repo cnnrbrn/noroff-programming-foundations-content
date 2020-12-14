@@ -4,6 +4,8 @@
 
 Your code must be properly formatted. You will lose marks for poorly formatted code.
 
+If you have previous experience with JavaScript you can use the `let` and `const` keywords instead of `var`.
+
 ## Questions
 
 1. Declare and initialise three variables with appropriate names and values. One variable with a number value, one with a boolean value and one with a string value.
