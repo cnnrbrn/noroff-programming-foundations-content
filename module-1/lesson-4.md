@@ -94,5 +94,14 @@ This video in an introduction to for loops.
 <a href="https://github.com/NoroffFEU/for-loop/blob/master/script.js" target="_blank">Code from the video</a>
 
 ---
+
+
+## Lesson Task
+
+There are practice questions in the master branch of [this repo](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson4).
+
+Attempt the answers before checking against the example answers in the [answers branch](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson4/tree/answers) of the repo.
+
+---
 - [Go to the module assignment](ma) 
 ---
