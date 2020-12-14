@@ -20,7 +20,7 @@ Comparison operators compare their operands (the values on either side of the op
     <tr>
         <td>===</td>
         <td>equal to</td>
-        <td>3 `===` 2</td>
+        <td>3 === 2</td>
         <td>false</td>
     </tr>
     <tr>
