@@ -44,13 +44,13 @@ Comparison operators compare their operands (the values on either side of the op
     <tr>
         <td><</td>
         <td>less than</td>
-        <td>5 > 4</td>
+        <td>5 < 4</td>
         <td>false</td>
     </tr>
     <tr>
         <td><=</td>
         <td>less than or equal to</td>
-        <td>3 > 4</td>
+        <td>3 <= 4</td>
         <td>true</td>
     </tr>
 </table>
