@@ -152,9 +152,11 @@ The video below discusses comments.
 
 ## Lesson Task
 
-There is a practice question in the master branch of [this repo](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson1).
+There is a practice question in the master branch of <a href="https://github.com/NoroffFEU/lesson-task-pf-module1-lesson1" target="_blank">this repo</a>.
 
-Attempt the answer before checking against the example answer in the [answer branch](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson1/tree/answer) of the repo.
+There is an example answer in the <a href="https://github.com/NoroffFEU/lesson-task-pf-module1-lesson1/tree/answer" target="_blank">answer branch</a>.
+
+Try the exercise before checking the solution.
 
 ---
 

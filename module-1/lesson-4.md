@@ -98,9 +98,11 @@ This video in an introduction to for loops.
 
 ## Lesson Task
 
-There are practice questions in the master branch of [this repo](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson4).
+There are practice questions in the master branch of <a href="https://github.com/NoroffFEU/lesson-task-pf-module1-lesson4" target="_blank">this repo</a>.
 
-Attempt the answers before checking against the example answers in the [answers branch](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson4/tree/answers) of the repo.
+There are example answers in the <a href="https://github.com/NoroffFEU/lesson-task-pf-module1-lesson4/tree/answers" target="_blank">answers branch</a>.
+
+Try the exercises before checking the solutions.
 
 ---
 - [Go to the module assignment](ma) 

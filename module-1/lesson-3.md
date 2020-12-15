@@ -280,9 +280,11 @@ This video looks at the assignment operator (=) versus the comparison operator (
 
 ## Lesson Task
 
-There are practice questions in the master branch of [this repo](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson3).
+There are practice questions in the master branch of <a href="https://github.com/NoroffFEU/lesson-task-pf-module1-lesson3" target="_blank">this repo</a>.
 
-Attempt the answers before checking against the example answers in the [answers branch](https://github.com/NoroffFEU/lesson-task-pf-module1-lesson3/tree/answers) of the repo.
+There are example answers in the <a href="https://github.com/NoroffFEU/lesson-task-pf-module1-lesson3/tree/answers" target="_blank">answers branch</a>.
+
+Try the exercises before checking the solutions.
 
 ---
 
