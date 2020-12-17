@@ -299,6 +299,16 @@ typeof false;
 
 ```
 
+We can assign the result of a typeof of operation to a variable.
+
+```js
+var animal = "elephant";
+var typeOfAnimal = typeof(animal);
+console.log(typeOfAnimal);
+// string
+```
+
+
 The video below is an introduction to the `typeof` operator.
 
 <iframe src="https://player.vimeo.com/video/489917338" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
