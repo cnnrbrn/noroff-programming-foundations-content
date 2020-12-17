@@ -299,7 +299,7 @@ typeof false;
 
 ```
 
-We can assign the result of a typeof of operation to a variable.
+We can assign the result of a `typeof` operation to a variable.
 
 ```js
 var animal = "elephant";
