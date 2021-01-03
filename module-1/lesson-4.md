@@ -1,6 +1,6 @@
 # Lesson 4 - Loops
 
-`Loops` are used to do the same thing over and over again. 
+`Loops` are used to do the same thing over and over again.
 
 If we wanted to console log a number value from 1 to 3, we could do something like this:
 
@@ -10,20 +10,21 @@ console.log(2);
 console.log(3);
 ```
 
-Seems reasonable enough. 
+Seems reasonable enough.
 
-But what if we wanted to log 1 to 100 or 1000? 
+But what if we wanted to log 1 to 100 or 1000?
 
 What if we wanted to log 1 to a number stored in a variable? Or from a number stored in a variable to another number stored in a variable. When writing the code, we wouldn't know either the start or end number.
 
 That's where loops come in.
 
 <a id="for-loop"></a>
+
 ## for loop
 
 ```js
-for(var i = 1; i <= 10; i++) {
-    console.log(i);
+for (var i = 1; i <= 10; i++) {
+	console.log(i);
 }
 ```
 
@@ -39,17 +40,17 @@ for(var i = 1; i <= 10; i++) {
 }
 ``` -->
 
-`var i = 1` is the starting value for the loop. We've set it to start at `1`. 
+`var i = 1` is the starting value for the loop. We've set it to start at `1`.
 
 Next is `i <= 10`. This is the condition that gets checked each time the loop runs. Each pass through the loop, the code will check if `i` is less than or equal to `10`. If it is, the code inside the curly braces `{}` will run. If not, the loop will stop.
-
 
 The `i++` part is the `iterator`. On each loop, it adds a value to the `i` variable. `i++` is shorthand for `i = i + 1`.
 
 So we could could rewrite the loop like this:
+
 ```js
-for(var i = 1; i <= 10; i = i + 1) {
-    console.log(i);
+for (var i = 1; i <= 10; i = i + 1) {
+	console.log(i);
 }
 ```
 
@@ -58,8 +59,8 @@ Some developers prefer to declare the variable outside the loop without initiali
 ```js
 var i;
 
-for(i = 1; i <= 10; i++) {
-    console.log(i);
+for (i = 1; i <= 10; i++) {
+	console.log(i);
 }
 ```
 
@@ -68,8 +69,8 @@ for(i = 1; i <= 10; i++) {
 Let's write a loop that counts from `5` to `25`:
 
 ```js
-for(var i = 5; i <= 25; i++) {
-    console.log(i);
+for (var i = 5; i <= 25; i++) {
+	console.log(i);
 }
 ```
 
@@ -78,8 +79,8 @@ We've set the variable to start at `5`. The loop will run until the condition (`
 We could write the condition differently:
 
 ```js
-for(var i = 5; i < 26; i++) {
-    console.log(i);
+for (var i = 5; i < 26; i++) {
+	console.log(i);
 }
 ```
 
@@ -95,7 +96,6 @@ This video in an introduction to for loops.
 
 ---
 
-
 ## Lesson Task
 
 There are practice questions in the master branch of <a href="https://github.com/NoroffFEU/lesson-task-pf-module1-lesson4" target="_blank">this repo</a>.
@@ -105,5 +105,7 @@ There are example answers in the <a href="https://github.com/NoroffFEU/lesson-ta
 Try the exercises before checking the solutions.
 
 ---
-- [Go to the module assignment](ma) 
+
+[Go to the module assignment](ma)
+
 ---

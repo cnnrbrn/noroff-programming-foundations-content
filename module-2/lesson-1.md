@@ -1,132 +1,202 @@
+# Lesson 1
 
-# Lesson 1 - Errors and some JavaScript silliness
+## String properties and methods
 
-Finding errrors and bugs in your code can be frustrating as they often appear to be "small" things like spelling mistakes or a missing keyword like `var`. These aren't small things to the JavaScript engine, though, and your code needs to be exact.
-
-We mentioned in [lesson 1](../1/1/) of module 1 that paying attention to the console in your browser is very important as this is where errors in your code will appear. When asking a tutor for help with code that doesn't work, the first thing they are likely to ask is if there are any errors in the console.
-
-Let's look at one error that occurs often to try and get a sense of what we look for when trying to find solutions to errors.
-
-Delete anything that may be in `js/script.js` that we created in [lesson 1](../1/1/) of module 1. Enter the following and save:
+Previously we used `length` to determine the number of characters in a string variable:
 
 ```js
-myVar;
+var firstName = "Humphrey";
+var lengthOfName = firstName.length;
+console.log(lengthOfName);
+// 8
 ```
 
-Reload the `index.html` page (if you aren't using [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)) and look at the console output. You should see something similar to this:
+`length` is a `property` of `firstName` because `firstName` has a string value.
 
-<img src="/images/error-not-defined.png" alt="Not defined" style="max-width: 600px" />
+String values in JavaScript have both `properties` and `methods`. They are both called in a similar way, by using a `.` after the variable and then the name of the property or method, but methods are called using parenthesis (brackets) after their name.
 
+Some string methods include `toLowerCase()` and `toUpperCase()`.
 
-You'll see this error if you've tried to create a variable but left out the `var` keyword. The JavaScript engine doesn't know that you want `myVar` to be a variable. 
+`toLowerCase()` converts a string variable to all lower case letters.
 
-Add the `var` keyword and check the console again.
+`toUpperCase()` converts a string variable to all upper case letters.
 
 ```js
-var myVar;
+var firstName = "Humphrey";
+
+var lower = firstName.toLowerCase();
+console.log(lower);
+// humphrey
+
+var lower = firstName.toUpperCase();
+console.log(lower);
+// HUMPHREY
 ```
 
-Now there are no more errors in the console:
+<iframe src="https://player.vimeo.com/video/493026234" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-<img src="/images/no-error.png" alt="No error" style="max-width: 600px" />
+<a href="https://vimeo.com/493026234/72f2c56cda" target="_blank">Watch on Vimeo</a>
 
-
-If you console log `myVar` now 
-
-```js
-var myVar;
-console.log(myVar);
-```
-
-and check the console, you will see it says `undefined`. 
-
-<img src="/images/error-undefined.png" alt="Undefined" style="max-width: 600px" />
-
-This can be a bit confusing. `undefined` doesn't mean there is an error, it just means that `myVar` (or any other variable) hasn't been assigned a meaningful value yet. 
-
-In general, serious errors will appear in red in the console. Warnings, or errors that may not break your code, will appear in orange.
+<a href="https://github.com/NoroffFEU/string-properties-and-methods/blob/master/script.js" target="_blank">Code from the video</a>
 
 ---
 
-## Undefined and null
+<a href="#lettercase"></a>
 
-We saw that an uninitialised variable (a variable that has been declared but not assigned a value), like `myVar` above, receives a value of `undefined`. 
+## Letter case matters in JavaScript
 
-`undefined` is a valid value in JavaScript, but you can think of it as an `empty value` - we can't do much with it. 
+JavaScript considers lower case and upper case versions of the same letter to be completely different.
 
-JavaScript has another `empty value` called `null` which you will often see too. In practical terms, there is not really any difference between `undefined` and `null`, they are both empty value types.
-
-So why have two empty value types and confuse everyone?
-
-The original version of JavaScript was written in ten days in the 1990s on a tight deadline. Some of the decisions made by the developer were not too great, but we have to live with them as there is an enormous amount of code written that takes into account these decisions. 
-
-
-## `===` versus `==`
-
-Over the past few years, enhancements to the language have improved it a lot and it's a much nicer language to work with now. 
-
-But it's important to be aware of the language's existing quirks, and another one that we briefly mentioned in module 1 was the triple equals equality operator `===` and the double equals equality operator `==`. The teachers love to stomp their feet when you use the `==` version.
-
-In module 1, [lesson 2](../1/2/), we looked at three types of values:
-
--   `string`
--   `number`
--   `boolean`
-
-(We've also now added `undefined` and `null` to the list of value types).
-
-Say we had the following two variables:
+`H` is not equal to `h`.
 
 ```js
-var stringFour = "4";
-var numberFour = 4;
-```
-
-If we wanted to use an `if` statement to check to see if they were equal, similar to what we did with the comparison operators in module 1, [lesson 3](../1/3/), we could write the comparison in two ways. 
-
-
-In module 1 we used `===`:
-
-```js
-var stringFour = "4";
-var numberFour = 4;
-
-if(stringFour === numberFour) {
-    console.log("equal");
-}
-else {
-    console.log("not equal");
+if ("H" === "h") {
+	console.log("The letters are equal");
+} else {
+	console.log("The letters are not equal");
 }
 ```
 
-Copy and run that code and you will see that `not equal` is logged. The `stringFour` variable has a string value, the `numberFour` variable has a number value. Using `===` makes sure that `string` values and `number` values can never be equal. This is a ***good*** thing and prevents lots of bugs.
-
-If we use the same code with the `==` operator, `equal` will be logged. 
+or using the inequality operator (not equals operator):
 
 ```js
-var stringFour = "4";
-var numberFour = 4;
-
-if(stringFour == numberFour) {
-    console.log("equal");
-}
-else {
-    console.log("not equal");
+if ("H" !== "h") {
+	console.log("The letters are not equal");
+} else {
+	console.log("The letters are equal");
 }
 ```
 
-This is because JavaScript will try to convert the value of one type to the value of another. In this case it will convert the `string` value `"4"` to a `number` value `4`. Technically this is called `type coercion`. It may not seem like it, but this is a ***bad*** thing. Lots of weird and unexpected things start to happen.
+So it follows that longer strings that have the same letters but different cases are not equal either.
 
-The same applies to the `not equal to` operators `!==` and `!=`.
+```js
+if ("Harry" === "harry") {
+	console.log("The names match");
+} else {
+	console.log("The names do not match");
+}
+```
 
-Please always use `===` and `!==`. 
+This video looks at using the `toLowerCase()` method to eliminate differences in case between strings.
+
+<iframe src="https://player.vimeo.com/video/495527292" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/495527292/6289051ab6" target="_blank">Watch on Vimeo</a>
+
+<a href="https://github.com/NoroffFEU/letter-case/blob/master/script.js" target="_blank">Code from the video</a>
+
+<!-- ## Multiple conditions in an if statement -->
+
+## The logical AND (&&) operator
+
+To check if more than one condition is true in an if statement, we can use the `&&` operator.
+
+There is no `and` keyword in JavaScript so we use `&&`. This is called the logical AND operator.
+
+The code below will check if two conditions are true, that the `selectedNumber` variable is both above or equal to 10 and below or equal to 50.
+
+```js
+var selectedNumber = 30;
+
+if (selectedNumber >= 10 && selectedNumber <= 50) {
+	console.log("The selected number is within range");
+}
+```
+
+<iframe src="https://player.vimeo.com/video/495602928" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/495602928/502a79a28c" target="_blank">Watch on Vimeo</a>
+
+<a href="https://github.com/NoroffFEU/logical-AND-operator/blob/main/script.js" target="_blank">Code from the video</a>
+
+## Nested if statements
+
+The video above contained if statements inside an else block. These are called nested if statements.
+
+We can use nested if statements to check for more specific conditions.
+
+```js
+if (someCondition === true && someOtherCondition === true) {
+	if (someCondition === true) {
+		// do something
+	}
+
+	if (someOtherCondition === true) {
+		// do something
+	}
+}
+```
+
+The video below is another look at an if statement with multiple (three this time) conditions using the `&&` operator. The else block in the code from video again contains nested if statements.
+
+<iframe src="https://player.vimeo.com/video/495808004" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/495808004/05ce4b9858" target="_blank">Watch on Vimeo</a>
+
+<a href="https://github.com/NoroffFEU/logical-AND-operator/blob/main/script2.js" target="_blank">Code from the video</a>
+
+## The logical NOT (!) operator
+
+The `!` operator can be used to check for the opposite of a boolean value.
+
+```js
+var orderShipped = false;
+
+if (!orderShipped) {
+	// the order did not ship
+}
+```
+
+This is the equivalent of writing:
+
+```js
+if (orderShipped === false) {
+	// the order did not ship
+}
+```
+
+or
+
+```js
+if (orderShipped !== true) {
+	// the order did not ship
+}
+```
+
+## Logical OR (||) operator
+
+We've used the `&&` operator to check if multiple conditions are true in an if statement. When using this operator all the conditions must pass.
+
+We can use the `||` operator to check if only one condition passes - only one condition needs to be met.
+
+```js
+var dayOfTheWeek = "Saturday";
+
+if (dayOfTheWeek === "Saturday" || dayOfTheWeek === "Sunday") {
+	console.log("It's the weekend");
+}
+```
+
+In the code above and in the video only one of the conditions needs to be met in order for the code inside the if block to execute.
+
+<iframe src="https://player.vimeo.com/video/495863328" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/495863328/51f5ec0294" target="_blank">Watch on Vimeo</a>
+
+<a href="https://github.com/NoroffFEU/logical-OR-operator/blob/master/script.js" target="_blank">Code from the video</a>
 
 ---
 
-In [lesson 2](2) we'll look at `arrays`.
+## Lesson Task
+
+There are practice questions in the master branch of <a href="https://github.com/NoroffFEU/lesson-task-pf-module2-lesson1" target="_blank">this repo</a>.
+
+There are example answers in the <a href="https://github.com/NoroffFEU/lesson-task-pf-module2-lesson1/tree/answers" target="_blank">answers branch</a>.
+
+Try the exercises before checking the solutions.
 
 ---
 
----
-- [Go to lesson 2](2) 
+[Go to lesson 2](2)
+
 ---

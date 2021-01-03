@@ -1,29 +1,41 @@
-
 # Lesson 2 - Arrays
 
-## Arrays
+## Introduction to arrays
+
+So far we've been using single values stored in a variable:
+
+```js
+var colour1 = "red";
+var colour2 = "pink";
+var colour3 = "yellow";
+```
+
+Arrays provide a way to store multiple values in a single variable.
 
 Arrays are lists of values in square brackets. Each value is separated by a comma `,`.
 
 Here is an empty array:
+
 ```js
 var emptyArray = [];
 ```
 
-In module 1, [lesson 4](../1/4/#arrayloops), we used a `for loop` to loop through an array of strings, the array of colours.
+Here are the three values above stored in a single array variable:
 
 ```js
-var colours = ["red", "blue", "green", "yellow"];
+var colours = ["red", "pink", "yellow"];
 ```
 
 Arrays can hold any kind of values.
 
 Here is an array of numbers:
+
 ```js
 var numbers = [6, 54, 17, 108];
 ```
 
 Here is an array of booleans:
+
 ```js
 var booleans = [true, false, false, true];
 ```
@@ -34,36 +46,26 @@ They can also hold different types of values:
 var mixedValues = ["blue", 17, false, 108, null];
 ```
 
-<!-- ###### Create a variable called `stringArray` and give it three string values
-~~parser js arrays stringArray~~
+<iframe src="https://player.vimeo.com/video/496045418" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-###### Create a variable called `numberArray` and give it three number values
-~~parser js arrays numberArray~~ -->
+<a href="https://vimeo.com/496045418/9b01233bbe" target="_blank">Watch on Vimeo</a>
 
-## Array properties and methods
+<a href="https://github.com/NoroffFEU/introduction-to-arrays/blob/master/script.js" target="_blank">Code from the video</a>
 
-#### Counting items in an array using `length`
+### Counting items in an array using `length`
 
-In module 1, [lesson 4](../1/4/#arraylength) we saw how to get the number of items in an array using the `length` property.
+Previously we saw how to get the number of characters in a string using the `length` property.
+
+We can use the same property to get the numbers of items in array:
 
 ```js
-var colours = ["red", "blue", "green", "yellow"];
+var colours = ["red", "pink", "yellow"];
 var numberOfColours = colours.length;
 console.log(numberOfColours);
-// 4
+// 3
 ```
 
-We don't really need that `numberOfColours` variable in the example above, we could log the length directly:
-
-```js
-console.log(colours.length);
-// 4
-```
-
-<!-- ###### Create a variable called `arrayLength` with an array value, give it at least one value and log the number of items in it
-~~parser js booleans arrayLength~~ -->
-
-#### Adding items to an array using `push`
+### Adding items to an array using `push`
 
 We can add new items to an array using the `push` method:
 
@@ -84,80 +86,95 @@ myArray.push(19);
 console.log(myArray.length);
 // 1
 
-console.log(myArray)
+console.log(myArray);
 // [19]
 ```
 
-Let's add a colour to the `colour` array:
+Let's add a colour to the `colours` array:
 
 ```js
-var colours = ["red", "blue", "green", "yellow"];
+var colours = ["red", "pink", "yellow"];
 
 // add purple to the colours array
 colours.push("purple");
 
 // now colours includes purple
 console.log(colours);
-// ["red", "blue", "green", "yellow", "purple"]
+// ["red", "pink", "yellow", "purple"]
 
-// now the length property will be 5 
+// now the length property will be 4
 console.log(colours.length);
-// 5
+// 4
 ```
 
-<!-- ###### Create a variable called `arrayLength` with an array value, give it at least one value and log the number of items in it
-~~parser js booleans arrayLength~~ -->
+---
 
+## Accessing items in arrays
+
+We can access items inside an array using the index of the item.
+
+The index is the position of the item in the array. The first item in the array is at position 0.
+
+We use square brackets to access an item by its index:
+
+```js
+var colours = ["red", "pink", "yellow"];
+
+var firstItem = colours[0];
+// red
+
+var thirdItem = colours[2];
+// yellow
+```
+
+We can use a for loop to access every item in an array.
+
+Because the first item in array is at index 0, our counter variable will begin at 0 and we will execute the loop only while the counter variable is less than the number of items in the array.
+
+```js
+var colours = ["red", "pink", "yellow"];
+
+for (var i = 0; i < colours.length; i++) {
+	var col = colours[i];
+	console.log(col);
+}
+// red
+// pink
+// yellow
+```
+
+<iframe src="https://player.vimeo.com/video/496109329" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/496109329/62318a0066" target="_blank">Watch on Vimeo</a>
+
+<a href="https://github.com/NoroffFEU/looping-through-arrays/blob/master/script.js" target="_blank">Code from the video</a>
 
 ## So what are arrays used for?
 
-Until now the example arrays haven't been much use, just some rather random lists.
+Most websites you visit use arrays to display data. Some examples would be:
 
-But almost every website you visit uses arrays for the data they display. Some examples would be:
+-   posts on an Instagram page
+-   articles on a news site
+-   a Twitter feed
 
-- posts on an Instagram page
-- articles on a news site
-- a Twitter feed
+But sites like Instagram loop through more complex data than simple value types like strings or numbers.
 
-All of those would be fetched from the server as an array, and the browser would loop through the array to display them on the page.
-
-<img src="/images/array-from-server.png" alt="Array from server" style="max-width: 480px" />
-
----
-
-If you visited a website and all it did was loop through a list of strings like in the diagram, you might not visit it too often. 
-
-Sites like Instagram loop through more complex data than simple types like strings or numbers. 
-
----
-
-Let's say we wanted to build a simple Instagram clone, called *Norogram*.
-
-Posts on *Norogram* would only include three variables:
-
-- `imageUrl`, which would be a URL `string` like `https://path/to/bee-picture`
-- `likeCounter`, which would be a `number` like `80`
-- `likedByUser` - whether or not the user has liked the image. This would be a `boolean` value - `true` or `false` 
-
-<img src="/images/norogram.png" alt="Norogram" style="max-width: 600px" />
-
-According to the diagram we need an array of three items (posts), and each item has three variables: `imageUrl`, `likeCounter` and `likedByUser`.
-
-We can store multiple variables in an item using `objects`.
-
----
+In JavaScript, complex data is stored in `objects`.
 
 In [lesson 3](3) we'll look at `objects` and `arrays of objects`.
 
 ---
 
-## Acivities
+## Lesson Task
 
-### Watch
+There are practice questions in the master branch of <a href="https://github.com/NoroffFEU/lesson-task-pf-module2-lesson2" target="_blank">this repo</a>.
 
-[Programming Foundations: Arrays and Loops](https://scrimba.com/c/ckPyJrt7)
+There are example answers in the <a href="https://github.com/NoroffFEU/lesson-task-pf-module2-lesson2/tree/answers" target="_blank">answers branch</a>.
+
+Try the exercises before checking the solutions.
 
 ---
 
-- [Go to lesson 3](3) 
+[Go to lesson 3](3)
+
 ---

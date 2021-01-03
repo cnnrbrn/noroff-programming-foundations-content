@@ -1,6 +1,26 @@
-# Lesson 3 - Objects and arrays of objects
+# Lesson 3 - null, Objects and arrays of objects
 
-`Objects` are used to store related variables. Variables inside objects are called `properties`. Everything in an object lives inside curly braces: `{}`
+## null
+
+We saw that an uninitialised variable (a variable that has been declared but not assigned a value), receives a value of `undefined`.
+
+You can think of `undefined` as an empty value - we can't do much with it.
+
+JavaScript has another empty value called `null` which you will often see too. In practical terms, there is not really any difference between undefined and null, they are both empty value types.
+
+So why have two empty value types and confuse everyone?
+
+The original version of JavaScript was written in ten days in the mid-1990s on a tight deadline. Some of the decisions made by the developer were maybe not the best but we have to live with them as there is an enormous amount of code written that takes into account these decisions.
+
+When a variable or object property (discussed below) has no real value it will often be given the value `null`.
+
+---
+
+## Introduction to objects
+
+`Objects` are used to store related variables.
+
+Variables inside objects are called `properties`. Everything in an object lives inside curly braces: `{}`
 
 Objects can have none or many properties.
 
@@ -20,34 +40,33 @@ We can represent these properties in an object in JavaScript like this:
 
 ```js
 var dog = {
-    name: "Tripod",
-    breed: "labrador",
-    numberOfLegs: 3
+	name: "Tripod",
+	breed: "labrador",
+	numberOfLegs: 3,
 };
 ```
 
 We've created a variable called `dog` with a value type of `object`. The `object` has three properties, `name`, `breed` and `numberOfLegs`.
 
-Each property has a `key` and a `value`. The `key` is on the left; it's the variable name. The `value` is on the right and is the... value.
+Each property has a `key` (or `name`) and a `value`. The `key` is on the left; it's the variable name. The `value` is on the right and is the... value.
 
 Each value can be any of the JavaScript value types we've covered so far:
 
-- `string`
-- `number`
-- `boolean`
-- `undefined`
-- `null`
+-   `string`
+-   `number`
+-   `boolean`
+-   `undefined`
+-   `null`
 
 ```js
 var dog = {
-    name: "Tripod", // name is the key, "Tripod" is the value, a string value
-    breed: "labrador", // breed is the key, "labrador" is the value, a string value
-    numberOfLegs: 3, // numberOfLegs is the key, 3 is the value, a number value
+	name: "Tripod", // name is the key, "Tripod" is the value, a string value
+	breed: "labrador", // breed is the key, "labrador" is the value, a string value
+	numberOfLegs: 3, // numberOfLegs is the key, 3 is the value, a number value
 };
 ```
 
 We can access an object's properties using dot `.` notation.
-
 
 To get the `dog`'s `name` value:
 
@@ -63,248 +82,102 @@ console.log(dog.breed);
 // "labrador"
 ```
 
+<iframe src="https://player.vimeo.com/video/496270832" height="500" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+<a href="https://vimeo.com/496270832/44859ca45f" target="_blank">Watch on Vimeo</a>
+
+<a href="https://github.com/NoroffFEU/introduction-to-objects/blob/master/script.js" target="_blank">Code from the video</a>
+
 ---
 
-Let's create objects for our *Norogram* items.
+## Arrays of objects
 
-First we'll reduce *Norogram* down to one post (item).
-
-<img src="/images/norogram-one-post.png" alt="Norogram one post" style="max-width: 231px" />
-
-As noted in the previous lesson, we need the following properties for an item:
-
-- imageUrl, a `string`
-- likeCounter, a `number`
-- likedByUser, a `boolean`
-
-We can create a post object with these properties like this:
+Here are two product objects:
 
 ```js
-var postItem = {
-    imageUrl: "https://path/to/bee-picture",
-    likeCounter: 80,
-    likedByUser: true
+var product1 = {
+	id: 327,
+	name: "Product 1",
+	price: 99.99,
+};
+
+var product2 = {
+	id: 968,
+	name: "Product 2",
+	price: 50.95,
 };
 ```
 
-Because we want an array of items to loop through, we'll store this object in an array.
+If we wanted to store these products in a list we would need to use an array, since arrays are how we hold lists of variables.
 
-If we had no items in our *Norogram* posts, the array would be empty:
+Items in an array are placed between square brackets and are separated by a comma:
 
 ```js
-var posts = [];
+var products = [product1, product2];
 ```
 
-Since this version of *Norogram* has one item, we need one item in the array, the object above.
+Now we have an array of objects.
 
-<a id="object-in-array"></a>
-When we store objects in arrays, we don't need the variable name:
+We can loop through the array of objects like any other array, using a for loop.
+
+This code will log each object in the array:
 
 ```js
-// we can remove the variable name
-{
-    imageUrl: "https://path/to/bee-picture",
-    likeCounter: 80,
-    likedByUser: true
+for (var i = 0; i < products.length; i++) {
+	console.log(products[i]);
 }
 ```
 
-Now we can store that object in the posts array:
+To log a property from each object we can use dot notation.
+
+This will log each product's `name` property:
 
 ```js
-var posts = [
-    {
-        imageUrl: "https://path/to/bee-picture",
-        likeCounter: 80,
-        likedByUser: true
-    }
+for (var i = 0; i < products.length; i++) {
+	var productName = products[i].product;
+	console.log(productName);
+}
+```
+
+When you fetch live data in your projects, the data will be sent as objects or arrays of objects, this is why we are covering these topics.
+
+A list of products containing the objects above sent from a server would look like this, with the objects placed directly into the array, rather than in variables.
+
+```js
+[
+	{
+		id: 327,
+		name: "Product 1",
+		price: 99.99,
+	},
+	{
+		id: 968,
+		name: "Product 2",
+		price: 50.95,
+	},
 ];
 ```
 
-Since we have one item in the array, the object, the array's length will be 1:
+This video looks at looping through arrays of objects and includes a practical use for the object properties, i.e. creating HTML from them.
 
-```js
-console.log(posts.length);
-// 1
-```
+<iframe src="https://player.vimeo.com/video/496371287" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-Let's use a `for loop` to loop through the `posts` array and console log the properties' values in the object.
+<a href="https://vimeo.com/496371287/211fcb39fe" target="_blank">Watch on Vimeo</a>
 
-First, let's just log the whole object.
-
-```js
-for(var i = 0; i < posts.length; i++) {
-
-    // we access each item in the array using its index
-    // we use the i variable as the index
-    console.log(posts[i]);
-}
-```
-
-This will log the whole object:
-
-```js
-// {
-//     imageUrl: "https://path/to/bee-picture",
-//     likeCounter: 80,
-//     likedByUser: true
-// }
-```
-<a id="properties-from-objects-in-arrays"></a>
-Now let's get the `imageUrl` property value of the item using dot `.` notation:
-
-```js
-for(var i = 0; i < posts.length; i++) {
-
-    // we use . and then the property name to access it
-    var image = posts[i].imageUrl;
-    console.log(image);
-    // "https://path/to/bee-picture"
-
-    // or we can log it directly without the variable
-    console.log(posts[i].imageUrl);
-    // "https://path/to/bee-picture"
-}
-```
-
-Let's log all the properties' values:
-
-```js
-for(var i = 0; i < posts.length; i++) {
-
-    console.log(posts[i].imageUrl);
-    // "https://path/to/bee-picture"
-
-    console.log(posts[i].likeCounter);
-    // 80
-
-    console.log(posts[i].likedByUser);
-    // true
-}
-```
-
-Let's add another post.
-
-<img src="/images/norogram-two-posts.png" alt="Norogram two posts" style="max-width: 438px" />
-
-Now we need another object in the array:
-
-```js
-var posts = [
-    // first item
-    {
-        imageUrl: "https://path/to/bee-picture",
-        likeCounter: 80,
-        likedByUser: true
-    },
-    // second item
-    {
-        imageUrl: "https://path/to/tree-picture",
-        likeCounter: 120,
-        likedByUser: false
-    }
-];
-```
-
-We use the same `for loop` no matter how many items in the array.
-
-Let's log only the `imageUrl` value:
-
-```js
-for(var i = 0; i < posts.length; i++) {
-
-    console.log(posts[i].imageUrl);
-}
-```
-
-This will log each `imageUrl` value:
-
-```js
-// "https://path/to/bee-picture"
-// "https://path/to/tree-picture"
-```
-
-
-Let's go back to the original three posts:
-
-<img src="/images/norogram-no-legend.png" alt="Norogram" style="max-width: 600px" />
-
-We need to add a third object to the array:
-
-```js
-var posts = [
-    // first item
-    {
-        imageUrl: "https://path/to/bee-picture",
-        likeCounter: 80,
-        likedByUser: true
-    },
-    // second item
-    {
-        imageUrl: "https://path/to/tree-picture",
-        likeCounter: 120,
-        likedByUser: false
-    },
-    // third item
-    {
-        imageUrl: "https://path/to/bat-picture",
-        likeCounter: 34,
-        likedByUser: true
-    }
-];
-```
-
-Again, we use the same `for loop`. This time we'll log the `likeCounter` value:
-
-```js
-for(var i = 0; i < posts.length; i++) {
-    console.log(posts[i].likeCounter);
-}
-```
-
-This will log:
-
-```js
-// 80
-// 120
-// 34
-```
-
-Let's log all the properties' values:
-
-```js
-for(var i = 0; i < posts.length; i++) {
-    console.log(posts[i].imageUrl);
-    console.log(posts[i].likeCounter);
-    console.log(posts[i].likedByUser);
-}
-```
-
-This will log:
-
-```js
-// "https://path/to/bee-picture"
-// 80
-// true
-// "https://path/to/tree-picture"
-// 120
-// false
-// "https://path/to/bat-picture"
-// 34
-// true
-```
+<a href="https://github.com/NoroffFEU/arrays-of-objects" target="_blank">Code from the video</a>
 
 ---
 
+<!--
 ## A real world example of an array of objects
 
 ### APIs
 
 A `REST` `API` is one way to fetch data from a server.
 
-`API` stands for `A`pplication `P`rogramming `I`nterface. 
+`API` stands for `A`pplication `P`rogramming `I`nterface.
 
-An `API` is a way for programs to communicate with each other. 
+An `API` is a way for programs to communicate with each other.
 
 `REST` stands for `Representational state transfer`.
 
@@ -338,58 +211,48 @@ Below you will see the API returns an array of objects like this:
 
 ```js
 [
-    {
-        "_id": "5cf1d0db3cfbe0fcbb6c4c93",
-        "index": 1,
-        "name": "Abul-Abbas",
-        "affiliation": "Charlemagne",
-        "species": "Asian",
-        "sex": "Male",
-        "fictional": "false",
-        "dob": "Unavailable",
-        "dod": "810",
-        "wikilink": "https://en.wikipedia.org/wiki/Abul-Abbas",
-        "image": "https://elephant-api.herokuapp.com/pictures/001.jpg",
-        "note": "An elephant given to Carolingian emperor Charlemagne by the Abbasid caliph Harun al-Rashid."
-    },
-    {
-        "_id": "5cf1d0db8c4845fb358b91d6",
-        "index": 2,
-        "name": "Arjuna",
-        "affiliation": "Dasara",
-        "species": "Asian",
-        "sex": "Male",
-        "fictional": "false",
-        "dob": "1960",
-        "dod": "-",
-        "wikilink": "https://en.wikipedia.org/wiki/Arjuna_(elephant)",
-        "image": "https://elephant-api.herokuapp.com/pictures/002.jpg",
-        "note": "A lead elephant of the world-famous Mysore Dasara procession."
-    }
-]
+	{
+		_id: "5cf1d0db3cfbe0fcbb6c4c93",
+		index: 1,
+		name: "Abul-Abbas",
+		affiliation: "Charlemagne",
+		species: "Asian",
+		sex: "Male",
+		fictional: "false",
+		dob: "Unavailable",
+		dod: "810",
+		wikilink: "https://en.wikipedia.org/wiki/Abul-Abbas",
+		image: "https://elephant-api.herokuapp.com/pictures/001.jpg",
+		note: "An elephant given to Carolingian emperor Charlemagne by the Abbasid caliph Harun al-Rashid.",
+	},
+	{
+		_id: "5cf1d0db8c4845fb358b91d6",
+		index: 2,
+		name: "Arjuna",
+		affiliation: "Dasara",
+		species: "Asian",
+		sex: "Male",
+		fictional: "false",
+		dob: "1960",
+		dod: "-",
+		wikilink: "https://en.wikipedia.org/wiki/Arjuna_(elephant)",
+		image: "https://elephant-api.herokuapp.com/pictures/002.jpg",
+		note: "A lead elephant of the world-famous Mysore Dasara procession.",
+	},
+];
 ```
+--- -->
 
-There will be many more objects than the two displayed above.
+## Lesson Task
 
-This looks a lot like our *Norogram* `posts` array, the objects just have more properties.
+There are practice questions in the master branch of <a href="https://github.com/NoroffFEU/lesson-task-pf-module2-lesson3" target="_blank">this repo</a>.
 
----
+There are example answers in the <a href="https://github.com/NoroffFEU/lesson-task-pf-module2-lesson3/blob/answers/js/script.js" target="_blank">answers branch</a>.
 
-In the JavaScript 1 course, we will use API calls to fetch data, loop over it with JavaScript and display it with HTML and CSS.
-
----
-
-In [lesson 4](4) we'll look at `functions`.
+Try the exercises before checking the solutions.
 
 ---
 
-## Acivities
+[Go to lesson 4](4)
 
-### Watch
-
-[Programming Foundations: Objects in arrays](https://scrimba.com/c/c77r6nUd)
-
----
-
-- [Go to lesson 4](4) 
 ---
