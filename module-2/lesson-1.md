@@ -1,4 +1,4 @@
-# Lesson 1
+# Lesson 1 - String properties and methods, multiple if conditions and nested if statements
 
 ## String properties and methods
 
