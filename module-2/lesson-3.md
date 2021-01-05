@@ -134,7 +134,7 @@ This will log each product's `name` property:
 
 ```js
 for (var i = 0; i < products.length; i++) {
-	var productName = products[i].product;
+	var productName = products[i].name;
 	console.log(productName);
 }
 ```
