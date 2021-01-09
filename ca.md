@@ -1,34 +1,14 @@
 # Course Assignment
 
-## Instructions
+## Brief
 
-The Level 1 questions are required.
-
-The Level 2 questions are optional.
+The files for the assignment can be found <a href="https://github.com/NoroffFEU/programming-foundations-ca" target="_blank">here</a>.
 
 Some of the questions don't provide variable names, and you must come up with them yourself. Choosing appropriate variable names will form part of your assessment, as will proper and consistent formatting of your code.
 
----
-
-<!-- > If you finish the course assignment and want to look ahead at some of the concepts we'll be covering in JavaScript 1, you can do so [here](/programming-foundations/looking-ahead). This is completely optional.
-
---- -->
-
 ## Level 1
 
-<h5 class="question">Question 1</h5>
-
-Declare and initialise a variable with a string value.
-
----
-
-<h5 class="question">Question 2</h5>
-
-Create an object variable called `person` and give it two properties (a key and a value) of your choice.
-
----
-
-<h5 class="question">Question 3</h5>
+### Question 1
 
 Create a variable called `outOfStock` and assign it a `boolean` value.
 
@@ -39,103 +19,138 @@ Otherwise log `"In stock"`.
 
 ---
 
-<h5 class="question">Question 4</h5>
+### Question 2
 
-Create an `array` of five numbers.
-
-Loop through the array and console log each value.
+Create a `for loop` that counts from 15 to 25. Console log the value of the counter variable inside the loop only if it's equal to 17 or 20.
 
 ---
 
-<h5 class="question">Question 5</h5>
+### Question 3
 
-Create a `for loop` that counts from 15 to 25. Console log the value of the counter variable inside the loop.
+Loop through the array below and add an `li` item to the `ul` element in the HTML containing the `title` and `rating` of each game only if the `rating` for the game is below `3.5`.
+
+```js
+var games = [
+	{
+		title: "Grand Theft Auto",
+		rating: 4.48,
+	},
+	{
+		title: "Portal 2",
+		rating: 3.5,
+	},
+	{
+		title: "Team Fortress",
+		rating: null,
+	},
+	{
+		title: "The Witcher",
+		rating: 3.0,
+	},
+	{
+		title: "The Elder Scrolls",
+		rating: 2.9,
+	},
+];
+```
+
+The `ul` element should look similar to this after your code executes:
+
+```html
+<ul>
+	<li>Name of game: rating</li>
+	<li>Name of game: rating</li>
+</ul>
+```
 
 ---
 
-<h5 class="question">Question 6</h5>
+### Question 4
 
-Using the same loop from the above question, only log the value of the counter variable if it is equal to `20`.
+Create a function called `whatIDontLike` that accepts one argument. Choose a good name for the argument.
 
----
+Inside the function, check if the argument has a string value. If it doesn't log the message "Please send in a string".
 
-<h5 class="question">Question 7</h5>
-
-Create an `array` of two `objects`. Each object must have the same three properties (with different values):
-
-- one property with a `string` value
-- one property with a `number` value
-- one property with a `boolean` value
-
-Loop through the array and console log the `number` value and the `boolean` value.
-
----
-
-<h5 class="question">Question 8</h5>
-
-Create a `function` called `whatIDontLike` that accepts one argument. Choose a good name for the argument.
-
-Inside the function, log the string `"I don't like "` together with the argument.
+If the argument is a string value, log the message `"I don't like "` together with the argument.
 
 Call the function and pass in a value of your choice.
 
-__Example:__<br>
+**Example:**<br>
 If you pass in the value `"giraffes"`, the function should log: `"I don't like giraffes"`.
 
 ---
 
-<h5 class="question">Question 9</h5>
+### Question 5
 
-Create a `function` that accepts two arguments.
+Create a function that accepts two arguments.
 
-Inside the function, subtract the second argument from the first and console log the result.
+Inside the function, try to convert the arguments to numbers.
 
----
+If either of the arguments cannot be converted to a number, return the value: `"Invalid argument(s)"`.
 
-<h5 class="question">Question 10</h5>
+If both arguments are number values or can be converted to number values, subtract the second argument from the first and return the result from the function.
 
-Create an empty `array`.
-
-Create a `function` that accepts one argument.
-
-Inside the function, add the argument to the array.
-
-Call the function and pass in a value of any type.
+Call the function, pass in to two values and assign the return value to be the innerHTML value of the element with the id `subtraction`.
 
 ---
 
-## Level 2
+### Question 6
 
-<h5 class="question">Question 1</h5>
+Select the button with the class `page`.
 
-Using the loop from question 5 above, only log the counter variable if it is an even number. 
+When the button is clicked do the following:
 
-__Hint:__ you can use the modulus `%` operator for this.
+-   Change the title of the page (the value of the title element in the head) to "Updated title".
+-   Change the background colour of the whole page to "yellow".
+-   Change the color of the `h1` element to "green".
+-   Change the `h1` element's font to "impact".
+-   Change the value of the `h1` element to be a link.
+-   Remove the list style and padding from the `ul` element.
+
+The `h1` element should look like this after the click event:
+
+```html
+<h1><a href="#">Programming Foundations Course Assignment</a></h1>
+```
 
 ---
 
-<h5 class="question">Question 2</h5>
+### Question 7
 
-Create a `function` that logs the sentence `"I am a function"`.
+Select the button with the class `page`.
 
-Assign this function to a variable called `innerFunction`. 
+When the button is clicked, loop through the array below, add all the prices and assign the total to be the innerHTML value of the element with the id `total`.
 
-Create another `function` called `outerFunction` that accepts one argument.
+```js
+var toys = [
+	{
+		name: "Lego",
+		price: 15.6,
+	},
+	{
+		name: "Master of the Universe",
+		price: "28.3",
+	},
+	{
+		name: "Barbie",
+		price: null,
+	},
+	{
+		name: "Mr Potato Head",
+		price: 89.99,
+	},
+];
+```
 
-Inside `outerFunction`, call the argument like you would a function - with parenthesis `()`.
-
-Call `outerFunction` and pass in the `innerFunction` variable.
-
+---
 
 ## Submission
 
-- Create a repository in your GitHub account called `prog-found-ca` and __make sure it's public__
-- Create a file called `level-1.js`
-- If you answer the level 2 questions, create a file called `level-2.js`
-- Write your answers inside these files with a comment above each answer indicating the question number:
+-   All your answers should be in the `js/script.js` file.
+-   You can submit only this file (zipped) or all the files from the repo (also zipped).
+-   Write your answers with a comment above each answer indicating the question number:
 
 ```js
-
 // question 1
 
 // your answer for question 1 goes here
@@ -145,14 +160,7 @@ Call `outerFunction` and pass in the `innerFunction` variable.
 // your answer for question 2 goes here
 
 // etc
-
 ```
 
-- Add, commit and push these files to your repo
-- Submit the repo link
-
----
-
-[Looking ahead to JavaScript 1](/programming-foundations/looking-ahead)
-
----
+-   The zipped folder should be called `{your-name}-pf-ca.js` (without the curly braces).
+-   Submit the zipped folder.

@@ -48,7 +48,7 @@ When the button in the HTML is clicked, change the colour of the h2 element to "
 ## Submission
 
 -   All your answers should be in the `js/script.js` file.
--   You can submit only this file (zipped) or all the files from the repo (also zipped)
+-   You can submit only this file (zipped) or all the files from the repo (also zipped).
 -   Write your answers with a comment above each answer indicating the question number:
 
 ```js
@@ -63,4 +63,5 @@ When the button in the HTML is clicked, change the colour of the h2 element to "
 // etc
 ```
 
--   Submit the zipped folder
+-   The zipped folder should be called `{your-name}-pf-ma2.js` (without the curly braces).
+-   Submit the zipped folder.
