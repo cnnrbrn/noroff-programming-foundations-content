@@ -117,7 +117,7 @@ The `h1` element should look like this after the click event:
 
 ### Question 7
 
-Select the button with the class `page`.
+Select the button with the class `price`.
 
 When the button is clicked, loop through the array below, add all the prices and assign the total to be the innerHTML value of the element with the id `total`.
 
