@@ -208,7 +208,7 @@ To convert a number without a decimal point use parseInt.
 
 ```js
 var integer = "7";
-var convertedInteger = parseInt(wholeNumber);
+var convertedInteger = parseInt(integer);
 // 7
 ```
 
@@ -216,7 +216,7 @@ To convert a number with a decimal point use parseFloat.
 
 ```js
 var decimalNumber = "7.9";
-var convertedDecimalNumber = parseFloat(wholeNumber);
+var convertedDecimalNumber = parseFloat(decimalNumber);
 // 7
 ```
 
